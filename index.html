@@ -1,7 +1,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>ASSISTANT PROTOTYPE Web Speech API</title>
+  <title>ASSISTANT PROTOTYPE</title>
   <style>
     body {
       font-family: monospace;
@@ -11,18 +11,17 @@
 </head>
 
 
-<body>
-  <span id="speech"></span>
-  <span id="interim"></span>
-</body>
-
+  <body>
+    <span id="speech"></span>
+    <span id="interim"></span>
+  </body>
   <script>
     function upgrade() {
       alert('Please use Google Chrome for best experience');
     }
 
     window.onload = function() {
-      if !(window.speechRecognition) {
+      if (!(window.speechRecognition)) {
         upgrade();
       } else {
         var recognizing,
@@ -39,7 +38,7 @@
           speech.start();
         }
 
-        var speech = new  speechRecognition();
+        var speech =  speechRecognition();
 
         speech.continuous = true;
         speech.interimResults = true;
