@@ -21,7 +21,7 @@
     }
 
     window.onload = function() {
-      if (!(window.speechRecognition)) {
+      if !(window.speechRecognition) {
         upgrade();
       } else {
         var recognizing,
