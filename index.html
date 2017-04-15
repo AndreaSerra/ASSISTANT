@@ -39,7 +39,7 @@
           speech.start();
         }
 
-        var speech = new  speechRecognition();
+        var speech = new webkitSpeechRecognition() || speechRecognition();
 
         speech.continuous = true;
         speech.interimResults = true;
