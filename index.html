@@ -26,24 +26,28 @@
       if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) { // if webspeech api is not available...
         upgrade();  // ...run the alert function
       } else {
+
+        //GLOBAL VARIABLES??
         var recognizing,
         transcription = document.getElementById('speech'),
         interim_span = document.getElementById('interim');
-        //interim_span.style.opacity = '0.1';
         var active
 
 
+
+        //CUSTOM FUNCTIONS
         function reset() {
           recognizing = false;
           interim_span.innerHTML = '';
           transcription.innerHTML = '';
           speech.start();
         }
-
         function visible() {
-          interim_span.style.opacity = '0.4';
+          interim_span.style.opacity = '0.7';
         }
 
+
+        //SPEECH RECOGNITION PART
         var speech = new webkitSpeechRecognition() || speechRecognition();
 
         speech.continuous = true;
@@ -53,8 +57,11 @@
 
         speech.onstart = function() {
             // When recognition begins
+            interim_span.style.opacity = '0.1';
             recognizing = true;
-            active = false;
+            if (active == true){
+              visible();
+            }
         };
 
         speech.onresult = function(event) {
@@ -72,12 +79,6 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-
-          if (final_transcript == "hello") {
-            active = true;
-            console.log("hello");
-            visible();
-          }
         };
 
 
@@ -90,6 +91,12 @@
 
         speech.onend = function() {
             // When recognition ends
+            if (final_transcript == "hello") {
+              active = true;
+              console.log("hello");
+            } else {
+              active = false;
+            }
             reset();
         };
 
