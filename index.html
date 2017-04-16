@@ -79,6 +79,12 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
+          if (final_transcript == "hello") {
+            active = true;
+            console.log("hello");
+          } else {
+            active = false;
+          }
         };
 
 
@@ -91,12 +97,6 @@
 
         speech.onend = function() {
             // When recognition ends
-            if (final_transcript == "hello") {
-              active = true;
-              console.log("hello");
-            } else {
-              active = false;
-            }
             reset();
         };
 
