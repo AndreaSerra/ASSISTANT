@@ -70,18 +70,16 @@
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
+              console.log(final_transcript);
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
           }
 
-          if (final_transcript === "hello") {
-            active = true;
-            console.log("hello");
-            visible();
-          } else {
-            console.log("ba");
-          }
+//            active = true;
+  //          console.log("hello");
+    //        visible();
+
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
         };
