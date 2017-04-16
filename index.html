@@ -29,11 +29,8 @@
         var recognizing,
         transcription = document.getElementById('speech'),
         interim_span = document.getElementById('interim');
-
-        function visible() {
-          interim_span.style.opacity = '0.4';
-        }
-
+        interim_span.style.opacity = '0.1';
+        var active
 
 
         function reset() {
@@ -53,6 +50,7 @@
         speech.onstart = function() {
             // When recognition begins
             recognizing = true;
+            active = false;
         };
 
         speech.onresult = function(event) {
@@ -71,11 +69,17 @@
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
 
-          if (transcription.innerHTML == "hello") {
-            visible();
+          if (final_transcript == "hello") {
+            active = true;
           }
-
         };
+
+        function visible() {
+          interim_span.style.opacity = '0.4';
+        }
+        if (active == true) {
+            visible();
+        }
 
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
