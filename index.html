@@ -29,7 +29,7 @@
         var recognizing,
         transcription = document.getElementById('speech'),
         interim_span = document.getElementById('interim');
-        interim_span.style.opacity = '0.1';
+        //interim_span.style.opacity = '0.1';
         var active
 
 
@@ -38,6 +38,10 @@
           interim_span.innerHTML = '';
           transcription.innerHTML = '';
           speech.start();
+        }
+
+        function visible() {
+          interim_span.style.opacity = '0.4';
         }
 
         var speech = new webkitSpeechRecognition() || speechRecognition();
@@ -72,15 +76,12 @@
           if (final_transcript == "hello") {
             active = true;
             console.log("hello");
+            visible();
           }
         };
 
-        function visible() {
-          interim_span.style.opacity = '0.4';
-        }
-        if (active == true) {
-            visible();
-        }
+
+
 
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
