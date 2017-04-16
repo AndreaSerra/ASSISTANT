@@ -44,7 +44,7 @@
 
         speech.continuous = true;
         speech.interimResults = true;
-        speech.lang = 'en-US'; // check google web speech example source for more lanuages
+        speech.lang = 'it-IT'; // check google web speech example source for more lanuages
         speech.start(); //enables recognition on default
 
         speech.onstart = function() {
@@ -52,13 +52,12 @@
             recognizing = true;
         };
 
-        if (event.results == "assistant") {
-
         speech.onresult = function(event) {
           // When recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
 
+          
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
@@ -69,8 +68,7 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-        }
-      };
+        };
 
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
