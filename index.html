@@ -57,7 +57,6 @@
 
         speech.onstart = function() {
             // When recognition begins
-            interim_span.style.opacity = '0.1';
             recognizing = true;
             if (active == true){
               visible();
@@ -82,7 +81,7 @@
           if (final_transcript == "hello") {
             active = true;
             console.log("hello");
-          } 
+          }
         };
 
 
