@@ -30,7 +30,7 @@
         transcription = document.getElementById('speech'),
         interim_span = document.getElementById('interim');
 
-        interim_span.style.opacity = '0.3';
+        interim_span.style.opacity = '0.1';
 
 
         function reset() {
@@ -52,13 +52,13 @@
             recognizing = true;
         };
 
-        if (event.results == "assistant") {
-
         speech.onresult = function(event) {
           // When recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
 
+          if (event.results == "hello") {
+          interim_span.style.opacity = '0.5';
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
@@ -69,8 +69,9 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-        }
-      };
+          }
+
+        };
 
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
