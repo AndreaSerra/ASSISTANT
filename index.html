@@ -57,8 +57,6 @@
           var interim_transcript = '';
           var final_transcript = '';
 
-          if (event.results == "hello") {
-          interim_span.style.opacity = '0.5';
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
@@ -69,8 +67,10 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-          }
 
+          if (transcription.innerHTML == "hello") {
+            interim_span.style.opacity = '0.7';
+          }
         };
 
         speech.onerror = function(event) {
