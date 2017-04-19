@@ -51,7 +51,7 @@
             interim_span.style.opacity = '0.7';
             console.log("YESSS");
           } else {
-            interim_span.style.opacity = '0.1';
+            interim_span.style.opacity = '0.0';
           }
         }
 
@@ -68,7 +68,7 @@
         speech.onstart = function() {
             // When recognition begins
             recognizing = true;
-            interim_span.style.opacity = '0.1';
+            interim_span.style.opacity = '0.0';
         };
 
         speech.onresult = function(event) {
