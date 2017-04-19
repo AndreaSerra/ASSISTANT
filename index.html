@@ -22,6 +22,11 @@
       alert('Please use Google Chrome for best experience');
     }
 
+    var active;
+    function visible() {
+      interim_span.style.opacity = '0.7';
+    }
+
     window.onload = function() {  // declare function to run at first load
       if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) { // if webspeech api is not available...
         upgrade();  // ...run the alert function
@@ -31,7 +36,7 @@
         var recognizing,
         transcription = document.getElementById('speech'),
         interim_span = document.getElementById('interim');
-        var active
+
 
 
 
@@ -42,9 +47,7 @@
           transcription.innerHTML = '';
           speech.start();
         }
-        function visible() {
-          interim_span.style.opacity = '0.7';
-        }
+
 
 
         //SPEECH RECOGNITION PART
@@ -82,6 +85,10 @@
 
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
+          if (  transcription.innerHTML == 'hello') {
+            active = true;
+            console.log("YES");
+          }
         };
 
 
