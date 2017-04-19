@@ -49,7 +49,7 @@
         function visible(active) {
           if (active == true){
             interim_span.style.opacity = '0.7';
-            console.log("YESSS")
+            console.log("YESSS");
           } else {
             interim_span.style.opacity = '0.1';
           }
@@ -81,6 +81,7 @@
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
               console.log(final_transcript);
+              visible(true);
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
@@ -89,7 +90,7 @@
 
           if (  final_transcript == 'wake up') {
         //    visible(true);
-        console.log("hola amigo");
+        console.log(final_transcript.length);
 
           }
           transcription.innerHTML = final_transcript;
