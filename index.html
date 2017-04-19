@@ -81,18 +81,16 @@
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
               console.log(final_transcript);
-              visible(true);
+              if (  final_transcript == 'wake up') {
+                console.log("if is working");
+              }
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
           }
 
 
-          if (  final_transcript == 'wake up') {
-        //    visible(true);
-        console.log(final_transcript.length);
 
-          }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
         };
