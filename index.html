@@ -22,9 +22,14 @@
       alert('Please use Google Chrome for best experience');
     }
 
-    var active;
-    function visible() {
-      interim_span.style.opacity = '0.7';
+
+    function visible(active) {
+      if (active == true){
+        interim_span.style.opacity = '0.7';
+        console.log("YESSS")
+      } else {
+        interim_span.style.opacity = '0.1';
+      }
     }
 
     window.onload = function() {  // declare function to run at first load
@@ -74,6 +79,9 @@
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
               console.log(final_transcript);
+              if (  final_transcript == 'wake up') {
+                visible(true);
+              }
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
@@ -85,10 +93,6 @@
 
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-          if (  final_transcript == 'hi') {
-            active = true;
-            console.log("YES");
-          }
         };
 
 
