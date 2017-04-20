@@ -68,7 +68,7 @@
         speech.onstart = function() {
             // When recognition begins
             recognizing = true;
-            interim_span.style.opacity = '0.0';
+            interim_span.style.opacity = '0.5';
         };
 
         speech.onresult = function(event) {
@@ -81,9 +81,9 @@
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
               console.log(final_transcript);
-              if (  final_transcript == 'wake up') {
-                console.log("if is working");
-              }
+              //if (  final_transcript == 'wake up') {
+              //  console.log("The if is working");
+              //}
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
