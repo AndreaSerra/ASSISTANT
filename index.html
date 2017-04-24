@@ -75,12 +75,22 @@
           // When recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
+          var command
+
 
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
-              console.log(final_transcript);
+              command = final_transcript.split(" ");
+              for (i = 0; i < command.length; i++) {
+                switch (command[i]) {
+                  case "ciao" :
+                    console.log(command[i]);
+                    break;
+                }
+              }
+              //console.log(final_transcript);
               //if (  final_transcript == 'wake up') {
               //  console.log("The if is working");
               //}
