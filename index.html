@@ -83,7 +83,7 @@
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
               searchCommand = final_transcript.split(" ");
-              for (i = 0; i < command.length; i++) {
+              for (i = 0; i < searchCommand.length; i++) {
                 switch (searchCommand[i]) {
                   case "ciao" :
                     //console.log(command[i]);
