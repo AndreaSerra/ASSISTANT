@@ -75,19 +75,25 @@
           // When recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
-          var command
+          var searchCommand
 
 
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
-              command = final_transcript.split(" ");
+              searchCommand = final_transcript.split(" ");
               for (i = 0; i < command.length; i++) {
-                switch (command[i]) {
+                switch (searchCommand[i]) {
                   case "ciao" :
-                    console.log(command[i]);
-                    command = " ";
+                    //console.log(command[i]);
+                    searchCommand = " ";
+                    var counter = 0;
+                    var myTimer = setInterval(function() { counter++; console.log(counter); }, 1000);
+                    if (counter === 10) {
+                      console.log("time out");
+                      clearInterval(myTimer);
+                    }
                     break;
                 }
               }
