@@ -41,6 +41,7 @@
         //CUSTOM FUNCTIONS
         function reset() {
           recognizing = false;
+          console.log("reset function");
           interim_span.innerHTML = '';
           transcription.innerHTML = '';
           speech.start();
@@ -69,6 +70,7 @@
             // When recognition begins
             recognizing = true;
             interim_span.style.opacity = '0.5';
+            console.log("speech recognition ON")
         };
 
         speech.onresult = function(event) {
@@ -76,7 +78,7 @@
           var interim_transcript = '';
           var final_transcript = '';
           var searchCommand
-
+          console.log("listening");
 
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
@@ -93,7 +95,7 @@
                     {
                       counter++;
                       console.log(counter);
-                      if (counter == 10) {
+                      if (counter == 50) {
                         console.log("time out");
                         clearInterval(myTimer);
                       }
