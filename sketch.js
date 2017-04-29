@@ -26,4 +26,12 @@ function draw() {
   stroke('rgba(255, 117, 117, 0.5)');
   noFill();
   rect(10, 10, 1883, 905);
+
+  for (counter=1 ; counter=10) {
+    // MOUSE ellipse
+    fill('rgba(255, 117, 117, 0.5)');
+    strokeWeight(0);
+    stroke(255, 117, 117);
+    ellipse(mouseX, mouseY, 100, 100);
+  }
 }
