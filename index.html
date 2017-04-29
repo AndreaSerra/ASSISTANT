@@ -1,21 +1,30 @@
 <html lang="en">
+<!-- HEAD -->
 <head>
   <meta charset="UTF-8">
   <title>ASSISTANT PROTOTYPE</title>
+  <!-- LIBRARIES -->
   <script src="p5.js" type="text/javascript"></script>
   <script src="p5.dom.js" type="text/javascript"></script>
   <script src="p5.sound.js" type="text/javascript"></script>
-  <script src="sketch.js" type="text/javascript"></script>
+  <!-- LIBRARIES -->
+  <!-- CSS -->
   <link href="style.css" rel="stylesheet" type="text/css">
   <style>
     body {
       font-family: monospace;
-      font-size: 16px;
+      font-size: 18px;
       margin: 0px;
+      background-color: rgb(49, 51, 56);
     }
     canvas {vertical-align: top;}
   </style>
+  <!-- CSS -->
 </head>
+<!-- HEAD -->
+
+
+
 
 <!-- HTML ELEMENTS -->
   <body>
@@ -25,13 +34,22 @@
     </div>
     </div>
 
-
-
+    <div class="text-box">
+      <!--p class="" >Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa.
+        Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem.
+        Nulla consequat massa quis enim. Donec pede justo, fringilla vel, aliquet nec, vulputate eget, arcu.
+        In enim justo, rhoncus ut, imperdiet a, venenatis vitae, justo. Nullam dictum felis eu pede mollis pretium. Integer tincidunt. Cras dapibus.
+        Vivamus elementum semper nisi. Aenean vulputate eleifend tellus. Aenean leo ligula, porttitor eu, consequat vitae, eleifend ac, enim.
+        Aliquam lorem ante, dapibus in, viverra quis, feugiat a, tellus. Phasellus viverra nulla ut metus varius laoreet. Quisque rutrum. Aenean imperdiet.
+      </p -->
       <span id="speech"></span>
       <span id="interim"></span>
+    </div>
+
 
   </body>
 <!-- HTML ELEMENTS -->
+
 
 
 
@@ -40,8 +58,6 @@
     function upgrade() {  // declare function to alert users to switch to chrome
       alert('Please use Google Chrome for best experience');
     }
-
-
 
 
     window.onload = function() {  // declare function to run at first load
@@ -156,5 +172,11 @@
   </script>
 <!-- JS SCRIPT -->
 
+
+
+
+<!-- P5JS SKETCH -->
+<script src="sketch.js" type="text/javascript"></script>
+<!-- P5JS SKETCH -->
 
 </html>

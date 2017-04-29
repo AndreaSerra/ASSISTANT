@@ -8,15 +8,22 @@ function setup() {
 }
 
 function draw() {
-  background(233);
-  // An ellipse
+  background(250);
+  // MOUSE ellipse
   fill('rgba(255, 117, 117, 0.5)');
-  strokeWeight(2);
+  strokeWeight(0);
   stroke(255, 117, 117);
-  ellipse(mouseX, mouseY, 200, 200);
+  ellipse(mouseX, mouseY, 100, 100);
 
-  strokeWeight(45);
+  // FIXED ellipse
+  fill('rgba(255, 117, 117, 0.5)');
+  strokeWeight(0);
+  stroke(255, 117, 117);
+  ellipse(110, 815, 100, 100);
+
+  // BORDER
+  strokeWeight(20);
   stroke('rgba(255, 117, 117, 0.5)');
   noFill();
-  rect(1, 1, 1915, 920);
+  rect(10, 10, 1883, 905);
 }
