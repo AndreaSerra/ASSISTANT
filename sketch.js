@@ -1,6 +1,7 @@
 function setup() {
   // Create the canvas
-  createCanvas(1900, 900);
+  var canvas = createCanvas(1920, 925);
+  canvas.parent('sketch-holder');
   background(200);
 }
 
@@ -10,5 +11,4 @@ function draw() {
   fill(204, 101, 192, 127);
   stroke(127, 63, 120);
   ellipse(mouseX, mouseY, 200, 200);
-  
 }
