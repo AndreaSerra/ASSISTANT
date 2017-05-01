@@ -51,6 +51,21 @@
     }
 
     var counter = 0;
+    var a = counter;
+    var b = 200;
+
+    var globalTimer = function(){
+      var myTimer = setInterval(function()
+      {
+        counter++;
+        console.log(counter);
+        a = counter;
+        if (counter == 20) {
+          console.log("time out");
+          clearInterval(myTimer);
+        }
+      }, 1000);
+    }
 
     window.onload = function() {  // declare function to run at first load
       if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) { // if webspeech api is not available...
@@ -118,15 +133,7 @@
                   case "ciao" :
                     //console.log(command[i]);
                     searchCommand = " ";
-                    var myTimer = setInterval(function()
-                    {
-                      counter++;
-                      console.log(counter);
-                      if (counter == 20) {
-                        console.log("time out");
-                        clearInterval(myTimer);
-                      }
-                    }, 1000);
+                    globalTimer();
 
                     break;
                 }
@@ -162,8 +169,7 @@
 
       }
     };
-    var a = counter;
-    var b = 200;
+
 
   </script>
 <!-- JS SCRIPT -->
