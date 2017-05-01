@@ -53,6 +53,7 @@
     var step1 = 1;
     var step2 = 0;
     var step3 = 0;
+    var searchCommand;
 
     var counter = 0;
     var a = 200;
@@ -73,6 +74,7 @@
           step1=1;
           step2=0;
           step3=0;
+          var searchCommand = " ";
         }
       }, 1000);
     }
@@ -131,7 +133,6 @@
           // When recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
-          var searchCommand
 
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
