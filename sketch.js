@@ -6,8 +6,6 @@ function setup() {
   canvas.parent('sketch-holder');
 }
 
-var a = 100;
-var b = 200;
 
 function draw() {
   background(250);
