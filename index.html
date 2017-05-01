@@ -50,6 +50,10 @@
       alert('Please use Google Chrome for best experience');
     }
 
+    var step1 = 1;
+    var step2 = 0;
+    var step3 = 0;
+
     var counter = 0;
     var a = 200;
     var b = 200;
@@ -133,14 +137,43 @@
               final_transcript += event.results[i][0].transcript;
               searchCommand = final_transcript.split(" ");
               for (i = 0; i < searchCommand.length; i++) {
-                switch (searchCommand[i]) {
-                  case "on" :  searchCommand = " ";  globalTimer();   break;
-                  case "red" : searchCommand = " ";  r = 255; g=0; bl=0;    break;
-                  case "green" : searchCommand = " ";  r = 0; g=255; bl=0;   break;
-                  case "blue" : searchCommand = " ";  r = 0; g=0; bl=255;   break;
 
+                switch (step1) {
+                  case 0: break;
+                  case 1:
+                    switch (searchCommand[i]) {
+                      case "on" :  searchCommand = " ";  globalTimer(); step1 = 0; step2=1; step3=0; break;
+                    }
                 }
+
+                switch (step2){
+                  case 0: break;
+                  case 1:
+                  switch (searchCommand[i]) {
+                    case "this" : searchCommand = " ";  step2=0; step3 = 1;     break;
+                  }
+                }
+
+                switch (step3) {
+                  case 0:  break;
+                  case 1:
+                    switch (searchCommand[i]) {
+                      case "red" : searchCommand = " ";  r = 255; g=0; bl=0;  step2=1; step3=0;  break;
+                      case "green" : searchCommand = " ";  r = 0; g=255; bl=0; step2=1; step3=0;  break;
+                      case "blue" : searchCommand = " ";  r = 0; g=0; bl=255; step2=1; step3=0;  break;
+                    }
+                }
+
               }
+
+              //  switch (searchCommand[i]) {
+              //    case "on" :  searchCommand = " ";  globalTimer();   break;
+              //    case "red" : searchCommand = " ";  r = 255; g=0; bl=0;    break;
+              //    case "green" : searchCommand = " ";  r = 0; g=255; bl=0;   break;
+              //    case "blue" : searchCommand = " ";  r = 0; g=0; bl=255;   break;
+//
+              //  }
+              //}
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
