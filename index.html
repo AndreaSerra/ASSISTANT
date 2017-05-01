@@ -50,6 +50,7 @@
       alert('Please use Google Chrome for best experience');
     }
 
+    var counter = 0;
 
     window.onload = function() {  // declare function to run at first load
       if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) { // if webspeech api is not available...
@@ -99,7 +100,7 @@
             console.log("speech recognition ON")
         };
 
-        var counter = 0;
+
 
         speech.onresult = function(event) {
           // When recognition produces result
