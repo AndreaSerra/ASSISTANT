@@ -99,6 +99,8 @@
             console.log("speech recognition ON")
         };
 
+        var counter = 0;
+
         speech.onresult = function(event) {
           // When recognition produces result
           var interim_transcript = '';
@@ -115,7 +117,6 @@
                   case "ciao" :
                     //console.log(command[i]);
                     searchCommand = " ";
-                    var counter = 0;
                     var myTimer = setInterval(function()
                     {
                       counter++;
