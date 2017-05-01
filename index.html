@@ -53,9 +53,9 @@
     var counter = 0;
     var a = 200;
     var b = 200;
-    var red = 10;
-    var green = 10;
-    var blue = 10;
+    var r = 10;
+    var g = 10;
+    var bl = 10;
 
 
     var globalTimer = function(){
@@ -135,9 +135,9 @@
               for (i = 0; i < searchCommand.length; i++) {
                 switch (searchCommand[i]) {
                   case "on" :  searchCommand = " ";  globalTimer();   break;
-                  case "red" : searchCommand = " ";  red=255; green=0; blue=0;    break;
-                  case "green" : searchCommand = " ";  red=0; green=255; blue=0;   break;
-                  case "blue" : searchCommand = " ";  red=0; green=0; blue=255;   break;
+                  case "red" : searchCommand = " ";  r=255; g=0; bl=0;    break;
+                  case "green" : searchCommand = " ";  r=0; g=255; bl=0;   break;
+                  case "blue" : searchCommand = " ";  r=0; g=0; bl=255;   break;
 
                 }
               }
