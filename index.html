@@ -149,7 +149,7 @@
                   case 0: break;
                   case 1:
                   switch (searchCommand[i]) {
-                    case "this" : searchCommand = " "; console.log("step3"); step2=0; step3 = 1;     break;
+                    case "this" : searchCommand = " "; console.log("step3"); step2=0; step3 = 1;  console.log("step3: ", step3);   break;
                   } break;
                 }
 
@@ -157,9 +157,9 @@
                   case 0:  break;
                   case 1:
                     switch (searchCommand[i]) {
-                      case "red" : searchCommand = " ";  r = 255; g=0; bl=0;  step2=1; step3=0;  break;
-                      case "green" : searchCommand = " ";  r = 0; g=255; bl=0; step2=1; step3=0;  break;
-                      case "blue" : searchCommand = " ";  r = 0; g=0; bl=255; step2=1; step3=0;  break;
+                      case "red" : searchCommand = " ";  r = 255; g=0; bl=0;  step2=1; step3=0;  console.log("red"); break;
+                      case "green" : searchCommand = " ";  r = 0; g=255; bl=0; step2=1; step3=0;  console.log("green"); break;
+                      case "blue" : searchCommand = " ";  r = 0; g=0; bl=255; step2=1; step3=0;  console.log("blue"); break;
                     } break;
                 }
 
