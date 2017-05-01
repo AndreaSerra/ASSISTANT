@@ -67,7 +67,6 @@
       {
         counter++;
         console.log(counter);
-        a = counter;
         if (counter == 20) {
           console.log("time out");
           clearInterval(myTimer);
@@ -142,16 +141,16 @@
                   case 0: break;
                   case 1:
                     switch (searchCommand[i]) {
-                      case "on" :  searchCommand = " ";  globalTimer(); step1 = 0; step2=1; step3=0; break;
-                    }
+                      case "on" :  searchCommand = " "; console.log("on"); globalTimer(); step1 = 0; step2=1; step3=0; break;
+                    } break;
                 }
 
                 switch (step2){
                   case 0: break;
                   case 1:
                   switch (searchCommand[i]) {
-                    case "this" : searchCommand = " ";  step2=0; step3 = 1;     break;
-                  }
+                    case "this" : searchCommand = " "; console.log("this"); step2=0; step3 = 1;     break;
+                  } break;
                 }
 
                 switch (step3) {
@@ -161,7 +160,7 @@
                       case "red" : searchCommand = " ";  r = 255; g=0; bl=0;  step2=1; step3=0;  break;
                       case "green" : searchCommand = " ";  r = 0; g=255; bl=0; step2=1; step3=0;  break;
                       case "blue" : searchCommand = " ";  r = 0; g=0; bl=255; step2=1; step3=0;  break;
-                    }
+                    } break;
                 }
 
               }
