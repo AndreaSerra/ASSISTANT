@@ -10,7 +10,7 @@ function setup() {
 function draw() {
   background(250);
   // MOUSE ellipse
-  fill('rgba(255, 117, 117, 0.5)');
+  fill('rgba(red, green, blue, 1)');
   strokeWeight(0);
   stroke(255, 117, 117);
   ellipse(mouseX, mouseY, a, b);

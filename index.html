@@ -51,8 +51,12 @@
     }
 
     var counter = 0;
-    var a = counter;
+    var a = 200;
     var b = 200;
+    var red = 10;
+    var green = 10;
+    var blue = 10;
+
 
     var globalTimer = function(){
       var myTimer = setInterval(function()
@@ -105,7 +109,7 @@
 
         speech.continuous = true;
         speech.interimResults = true;
-        speech.lang = 'it-IT'; // check google web speech example source for more lanuages
+        speech.lang = 'en-US'; // check google web speech example source for more lanuages
         speech.start(); //enables recognition on default
 
         speech.onstart = function() {
@@ -130,18 +134,13 @@
               searchCommand = final_transcript.split(" ");
               for (i = 0; i < searchCommand.length; i++) {
                 switch (searchCommand[i]) {
-                  case "ciao" :
-                    //console.log(command[i]);
-                    searchCommand = " ";
-                    globalTimer();
+                  case "on" :  searchCommand = " ";  globalTimer();   break;
+                  case "red" : searchCommand = " ";  red=255; green=0; blue=0;    break;
+                  case "green" : searchCommand = " ";  red=0; green=255; blue=0;   break;
+                  case "blue" : searchCommand = " ";  red=0; green=0; blue=255;   break;
 
-                    break;
                 }
               }
-              //console.log(final_transcript);
-              //if (  final_transcript == 'wake up') {
-              //  console.log("The if is working");
-              //}
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
