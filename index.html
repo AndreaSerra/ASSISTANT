@@ -141,7 +141,8 @@
                   case 0: break;
                   case 1:
                     switch (searchCommand[i]) {
-                      case "on" :  searchCommand = " "; globalTimer(); step1 = 0; step2=1; step3=0; console.log("step2: ", step2); break;
+                      case "on" :  searchCommand = " "; globalTimer(); step1 = 0; step2=1; step3=0; console.log("on, step2: ", step2); break;
+                      case "On" :  searchCommand = " "; globalTimer(); step1 = 0; step2=1; step3=0; console.log("On, step2: ", step2); break;
                     } break;
                 }
 
@@ -149,7 +150,8 @@
                   case 0: break;
                   case 1:
                   switch (searchCommand[i]) {
-                    case "this" : searchCommand = " "; step2=0; step3 = 1;  console.log("step3: ", step3);   break;
+                    case "this" : searchCommand = " "; step2=0; step3 = 1;  console.log("this, step3: ", step3);   break;
+                    case "This" : searchCommand = " "; step2=0; step3 = 1;  console.log("This, step3: ", step3);   break;
                   } break;
                 }
 
@@ -160,6 +162,9 @@
                       case "red" : searchCommand = " ";  r = 255; g=0; bl=0;  step2=1; step3=0;  console.log("red"); break;
                       case "green" : searchCommand = " ";  r = 0; g=255; bl=0; step2=1; step3=0;  console.log("green"); break;
                       case "blue" : searchCommand = " ";  r = 0; g=0; bl=255; step2=1; step3=0;  console.log("blue"); break;
+                      case "Red" : searchCommand = " ";  r = 255; g=0; bl=0;  step2=1; step3=0;  console.log("Red"); break;
+                      case "Green" : searchCommand = " ";  r = 0; g=255; bl=0; step2=1; step3=0;  console.log("Green"); break;
+                      case "Blue" : searchCommand = " ";  r = 0; g=0; bl=255; step2=1; step3=0;  console.log("Blue"); break;
                     } break;
                 }
 
