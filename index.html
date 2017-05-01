@@ -67,9 +67,12 @@
       {
         counter++;
         console.log(counter);
-        if (counter == 20) {
+        if (counter == 30) {
           console.log("time out");
           clearInterval(myTimer);
+          step1=1;
+          step2=0;
+          step3=0;
         }
       }, 1000);
     }
