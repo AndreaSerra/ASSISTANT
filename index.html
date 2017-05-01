@@ -141,7 +141,7 @@
                   case 0: break;
                   case 1:
                     switch (searchCommand[i]) {
-                      case "on" :  searchCommand = " "; console.log("on"); globalTimer(); step1 = 0; step2=1; step3=0; break;
+                      case "on" :  searchCommand = " "; globalTimer(); step1 = 0; step2=1; step3=0; console.log("step2: ", step2); break;
                     } break;
                 }
 
@@ -149,7 +149,7 @@
                   case 0: break;
                   case 1:
                   switch (searchCommand[i]) {
-                    case "this" : searchCommand = " "; console.log("this"); step2=0; step3 = 1;     break;
+                    case "this" : searchCommand = " "; console.log("step3"); step2=0; step3 = 1;     break;
                   } break;
                 }
 
