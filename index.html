@@ -68,13 +68,13 @@
       {
         counter++;
         console.log(counter);
-        if (counter == 30) {
+        if (counter >= 30) {
           console.log("time out");
           clearInterval(myTimer);
           step1=1;
           step2=0;
           step3=0;
-          searchCommand = [];
+          final_transcript=" ";
         }
       }, 1000);
     }
@@ -163,12 +163,12 @@
                   case 0:  break;
                   case 1:
                     switch (searchCommand[i]) {
-                      case "red" : searchCommand = [];  r = 255; g=0; bl=0;  console.log("red"); step2=1; step3=0; break;
-                      case "green" : searchCommand = [];  r = 0; g=255; bl=0;  console.log("green"); step2=1; step3=0; break;
-                      case "blue" : searchCommand = [];  r = 0; g=0; bl=255;   console.log("blue"); step2=1; step3=0; break;
-                      case "Red" : searchCommand = [];  r = 255; g=0; bl=0;  console.log("Red"); step2=1; step3=0; break;
-                      case "Green" : searchCommand = [];  r = 0; g=255; bl=0;  console.log("Green"); step2=1; step3=0; break;
-                      case "Blue" : searchCommand = [];  r = 0; g=0; bl=255; console.log("Blue"); step2=1; step3=0; break;
+                      case "red" : final_transcript=" "; r = 255; g=0; bl=0;  console.log("red"); step2=1; step3=0; break;
+                      case "green" : final_transcript=" ";  r = 0; g=255; bl=0;  console.log("green"); step2=1; step3=0; break;
+                      case "blue" : final_transcript=" "; r = 0; g=0; bl=255;   console.log("blue"); step2=1; step3=0; break;
+                      case "Red" : final_transcript=" "; r = 255; g=0; bl=0;  console.log("Red"); step2=1; step3=0; break;
+                      case "Green" : final_transcript=" ";  r = 0; g=255; bl=0;  console.log("Green"); step2=1; step3=0; break;
+                      case "Blue" : final_transcript=" ";  r = 0; g=0; bl=255; console.log("Blue"); step2=1; step3=0; break;
                     } break;
                 }
 
