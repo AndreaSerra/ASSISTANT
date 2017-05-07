@@ -144,52 +144,50 @@
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
-              //for (i = 0; i < searchCommand.length; i++) {
-
-              //  switch (step1) {
-              //    case 0: break;
-              //    case 1:
-              //      switch (searchCommand[i]) {
-              //        case "on" : globalTimer(); step1 = 0; step2=1; step3=0; break;
-              //        case "On" : globalTimer(); step1 = 0; step2=1; step3=0; break;
-              //      } break;
-              //  }
-
-                 /* and end with
-                switch (step2){
-                  case 0: break;
-                  case 1:
-                  switch (searchCommand[i]) {
-                    case "this" : searchCommand[i] = " "; console.log("this, step3: ", step3); step2=0; step3 = 1;  break;
-                    case "This" : searchCommand[i] = " "; console.log("This, step3: ", step3); step2=0; step3 = 1;    break;
-                  } break;
-                }
-
-                switch (step3) {
-                  case 0:  break;
-                  case 1:
-                    switch (searchCommand[i]) {
-                      case "red" : event.results=null; r = 255; g=0; bl=0;  console.log("red"); step2=1; step3=0; break;
-                      case "green" : event.results=null;  r = 0; g=255; bl=0;  console.log("green"); step2=1; step3=0; break;
-                      case "blue" : event.results=null; r = 0; g=0; bl=255;   console.log("blue"); step2=1; step3=0; break;
-                      case "Red" : event.results=null; r = 255; g=0; bl=0;  console.log("Red"); step2=1; step3=0; break;
-                      case "Green" : event.results=null;  r = 0; g=255; bl=0;  console.log("Green"); step2=1; step3=0; break;
-                      case "Blue" : event.results=null;  r = 0; g=0; bl=255; console.log("Blue"); step2=1; step3=0; break;
-                    } break;
-                }
-
-                */
-            // }
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
           }
 
-
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
+
           searchCommand = transcription.innerHTML.split(" ");
           console.log(searchCommand);
+          for (i = 0; i < searchCommand.length; i++) {
+
+            switch (step1) {
+              case 0: break;
+              case 1:
+                switch (searchCommand[i]) {
+                  case "on" : globalTimer(); step1 = 0; step2=1; step3=0; break;
+                  case "On" : globalTimer(); step1 = 0; step2=1; step3=0; break;
+                } break;
+            }
+
+             /* and end with
+            switch (step2){
+              case 0: break;
+              case 1:
+              switch (searchCommand[i]) {
+                case "this" : searchCommand[i] = " "; console.log("this, step3: ", step3); step2=0; step3 = 1;  break;
+                case "This" : searchCommand[i] = " "; console.log("This, step3: ", step3); step2=0; step3 = 1;    break;
+              } break;
+            }
+            switch (step3) {
+              case 0:  break;
+              case 1:
+                switch (searchCommand[i]) {
+                  case "red" : event.results=null; r = 255; g=0; bl=0;  console.log("red"); step2=1; step3=0; break;
+                  case "green" : event.results=null;  r = 0; g=255; bl=0;  console.log("green"); step2=1; step3=0; break;
+                  case "blue" : event.results=null; r = 0; g=0; bl=255;   console.log("blue"); step2=1; step3=0; break;
+                  case "Red" : event.results=null; r = 255; g=0; bl=0;  console.log("Red"); step2=1; step3=0; break;
+                  case "Green" : event.results=null;  r = 0; g=255; bl=0;  console.log("Green"); step2=1; step3=0; break;
+                  case "Blue" : event.results=null;  r = 0; g=0; bl=255; console.log("Blue"); step2=1; step3=0; break;
+                } break;
+            }
+            */
+          }
 
         };
         // SPEECH RECOGNITION LOOP
