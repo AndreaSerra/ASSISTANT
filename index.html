@@ -144,7 +144,6 @@
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
-              searchCommand = final_transcript.split(" ");
 
               //for (i = 0; i < searchCommand.length; i++) {
 
@@ -185,6 +184,7 @@
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
+            searchCommand = final_transcript.split(" ");
             console.log(searchCommand);
           }
           transcription.innerHTML = final_transcript;
