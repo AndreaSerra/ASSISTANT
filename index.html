@@ -186,7 +186,7 @@
             }
           }
           searchCommand = final_transcript.split(" ");
-          console.log(searchCommand);
+
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
 
@@ -194,7 +194,8 @@
         };
         // SPEECH RECOGNITION LOOP
 
-
+        console.log(searchCommand);
+        
         // LAUNCHES ONLY IF AN ERROR OCCURS
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
