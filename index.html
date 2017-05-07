@@ -145,7 +145,6 @@
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
               searchCommand = event.results[i][0].transcript.split(" ");
-              console.log(searchCommand);
               //for (i = 0; i < searchCommand.length; i++) {
 
               //  switch (step1) {
@@ -188,6 +187,7 @@
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
+          console.log(searchCommand);
 
         };
         // SPEECH RECOGNITION LOOP
