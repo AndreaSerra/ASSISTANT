@@ -184,10 +184,11 @@
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
+            console.log(searchCommand);
           }
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-          console.log(searchCommand);
+
 
         };
         // SPEECH RECOGNITION LOOP
