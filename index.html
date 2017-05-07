@@ -28,7 +28,7 @@
 
 <!-- HTML ELEMENTS -->
   <body>
-    <div class="p5canvas">
+    <div class="p5canvas" style="background-color:white">
     <div id="sketch-holder" class="">
       <!-- sketch will go here! -->
     </div>
@@ -46,15 +46,12 @@
 
 <!-- JS SCRIPT -->
   <script>
-    function upgrade() {  // declare function to alert users to switch to chrome
-      alert('Please use Google Chrome for best experience');
-    }
 
+    // GLOBAL VARIABLES
     var step1 = 1;
     var step2 = 0;
     var step3 = 0;
     var searchCommand = [];
-
     var counter = 0;
     var a = 200;
     var b = 200;
@@ -62,13 +59,21 @@
     var g = 10;
     var bl = 10;
 
+    // GLOBAL VARIABLES
 
+    // "OPEN IN CHROME" ALERT FUNCTION
+    function upgrade() {  // declare function to alert users to switch to chrome
+      alert('Please use Google Chrome for best experience');
+    }
+    // "OPEN IN CHROME" ALERT FUNCTION
+
+    // TIMER FUNCTION
     var globalTimer = function(){
       var myTimer = setInterval(function()
       {
         counter++;
         console.log(counter);
-        if (counter >= 30) {
+        if (counter >= 300) {
           console.log("time out");
           clearInterval(myTimer);
           step1=1;
@@ -77,23 +82,25 @@
           final_transcript=" ";
           counter = 0;
         }
-      }, 1000);
+      }, 100);
     }
+    // TIMER FUNCTION
 
+    // ONLOAD FUNCTION, speech recognition function are all inside this function; to use data outside this loop global variables MUST be declared
     window.onload = function() {  // declare function to run at first load
       if (!(window.webkitSpeechRecognition) && !(window.speechRecognition)) { // if webspeech api is not available...
         upgrade();  // ...run the alert function
-      } else {
+      } else { // ...else run the speech recognition
+        // this else contains EVERYTHING related to speech recognition, so speech functions/methods are all contained insidethis parenthesis
 
-        //GLOBAL VARIABLES??
+
+        //RECOGNITION OUTPUT VARIABLES
         var recognizing,
         transcription = document.getElementById('speech'),
         interim_span = document.getElementById('interim');
 
 
-
-
-        //CUSTOM FUNCTIONS
+        //CUSTOM FUNCTIONS inside the speechrecognition function, not global
         function reset() {
           recognizing = false;
           console.log("reset function");
@@ -110,31 +117,30 @@
             interim_span.style.opacity = '0.0';
           }
         }
+        //CUSTOM FUNCTIONS inside the speechrecognition function, not global
 
 
-
-        //SPEECH RECOGNITION PART
+        //SPEECH RECOGNITION SETUP
         var speech = new webkitSpeechRecognition() || speechRecognition();
-
         speech.continuous = true;
         speech.interimResults = true;
         speech.lang = 'en-US'; // check google web speech example source for more lanuages
         speech.start(); //enables recognition on default
-
+        // START FUNCTION
         speech.onstart = function() {
             // When recognition begins
             recognizing = true;
             interim_span.style.opacity = '0.5';
             console.log("speech recognition ON")
         };
+        // START FUNCTION
 
 
-
+        // SPEECH RECOGNITION LOOP
         speech.onresult = function(event) {
           // When recognition produces result
           var interim_transcript = '';
           var final_transcript = '';
-
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
@@ -146,11 +152,12 @@
                   case 0: break;
                   case 1:
                     switch (searchCommand[i]) {
-                      case "on" :  searchCommand[i] = " "; globalTimer();  console.log("on, step2: ", step2); step1 = 0; step2=1; step3=0; break;
-                      case "On" :  searchCommand[i] = " "; globalTimer();  console.log("On, step2: ", step2); step1 = 0; step2=1; step3=0; break;
+                      case "on" :  searchCommand[i] = " "; globalTimer(); step1 = 0; step2=1; step3=0; break;
+                      case "On" :  searchCommand[i] = " "; globalTimer(); step1 = 0; step2=1; step3=0; break;
                     } break;
                 }
 
+                 /* and end with
                 switch (step2){
                   case 0: break;
                   case 1:
@@ -173,45 +180,36 @@
                     } break;
                 }
 
+                */
               }
-
-              //  switch (searchCommand[i]) {
-              //    case "on" :  searchCommand = " ";  globalTimer();   break;
-              //    case "red" : searchCommand = " ";  r = 255; g=0; bl=0;    break;
-              //    case "green" : searchCommand = " ";  r = 0; g=255; bl=0;   break;
-              //    case "blue" : searchCommand = " ";  r = 0; g=0; bl=255;   break;
-//
-              //  }
-              //}
             } else {
               interim_transcript += event.results[i][0].transcript;
             }
           }
-
-
-
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
         };
+        // SPEECH RECOGNITION LOOP
 
 
-
-
+        // LAUNCHES ONLY IF AN ERROR OCCURS
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
             console.error(event.error);
         };
+        // LAUNCHES ONLY IF AN ERROR OCCURS
 
+
+        // END OF SPEECHRECOGN FUNCTION
         speech.onend = function() {
             // When recognition ends
             reset();
             console.log("end");
         };
-
+        // END OF SPEECHRECOGN FUNCTION
       }
     };
-
-
+    // ONLOAD FUNCTION, speech recognition function are all inside this function; to use data outside this loop global variables MUST be declared
   </script>
 <!-- JS SCRIPT -->
 
