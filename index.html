@@ -143,9 +143,9 @@
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
-              console.log(event.results[i][0].transcript);
               final_transcript += event.results[i][0].transcript;
-              //searchCommand = final_transcript.split(" ");
+              searchCommand = event.results[i][0].transcript.split(" ");
+              console.log(searchCommand);
               //for (i = 0; i < searchCommand.length; i++) {
 
               //  switch (step1) {
