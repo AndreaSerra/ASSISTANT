@@ -144,7 +144,6 @@
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
               final_transcript += event.results[i][0].transcript;
-
               //for (i = 0; i < searchCommand.length; i++) {
 
               //  switch (step1) {
@@ -185,17 +184,18 @@
               interim_transcript += event.results[i][0].transcript;
             }
           }
-          searchCommand = final_transcript.split(" ");
+
 
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-
+          searchCommand = transcription.innerHTML.split(" ");
+          console.log(searchCommand);
 
         };
         // SPEECH RECOGNITION LOOP
 
-        console.log(searchCommand);
-        
+
+
         // LAUNCHES ONLY IF AN ERROR OCCURS
         speech.onerror = function(event) {
             // Either 'No-speech' or 'Network connection error'
