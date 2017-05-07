@@ -14,7 +14,7 @@ function setup() {
 
 
 function draw() {
-  background('rgba(255,255,255, 0.3)');
+  background('rgba(255,255,255, 1)');
 
 
   // MOUSE ellipse
@@ -26,7 +26,7 @@ function draw() {
 
 
   // FIXED ellipse
-  fill('rgba(255, 117, 117, '+colorOpacityProva+' )');
+  fill('rgba(255, 117, 117, 0.5 )');
   strokeWeight(0);
   stroke(255, 117, 117);
   ellipse(110, 815, 100, 100);
