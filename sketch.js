@@ -22,7 +22,7 @@ function draw() {
   fill(coloreCerchio);
   strokeWeight(0);
   stroke(255, 117, 117);
-  ellipse(ellipseX, ellipseY, a, b);
+  ellipse(mouseX, mouseY, a, b);
 
 
   // FIXED ellipse
