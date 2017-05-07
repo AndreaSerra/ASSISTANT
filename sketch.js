@@ -3,7 +3,7 @@ function setup() {
   var l = 1920;
   var h = 925;
   var canvas = createCanvas(l, h);
-  //canvas.parent('sketch-holder');
+  canvas.parent('sketch-holder');
   frameRate(90);
 
   var ellipseX=mouseX;
