@@ -143,18 +143,19 @@
           // main for loop for final and interim results
           for (var i = event.resultIndex; i < event.results.length; ++i) {
             if (event.results[i].isFinal) {
-              final_transcript = event.results[i][0].transcript;
-              searchCommand = final_transcript.split(" ");
-              for (i = 0; i < searchCommand.length; i++) {
+              console.log(event.results[i]);
+              //final_transcript += event.results[i][0].transcript;
+              //searchCommand = final_transcript.split(" ");
+              //for (i = 0; i < searchCommand.length; i++) {
 
-                switch (step1) {
-                  case 0: break;
-                  case 1:
-                    switch (searchCommand[i]) {
-                      case "on" : globalTimer(); step1 = 0; step2=1; step3=0; break;
-                      case "On" : globalTimer(); step1 = 0; step2=1; step3=0; break;
-                    } break;
-                }
+              //  switch (step1) {
+              //    case 0: break;
+              //    case 1:
+              //      switch (searchCommand[i]) {
+              //        case "on" : globalTimer(); step1 = 0; step2=1; step3=0; break;
+              //        case "On" : globalTimer(); step1 = 0; step2=1; step3=0; break;
+              //      } break;
+              //  }
 
                  /* and end with
                 switch (step2){
@@ -182,7 +183,7 @@
                 */
               }
             } else {
-              interim_transcript = event.results[i][0].transcript;
+              interim_transcript += event.results[i][0].transcript;
             }
           }
           transcription.innerHTML = final_transcript;
