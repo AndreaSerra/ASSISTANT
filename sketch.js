@@ -1,3 +1,5 @@
+var ellipseDiameter = map(counter, 0, 3000, 0, 100);
+
 function setup() {
   // Create the canvas
   var l = 1920;
@@ -9,7 +11,7 @@ function setup() {
   var ellipseX=mouseX;
   var ellipseY=mouseY;
   var rangeOpacity=mouseX;
-  var ellipseDiameter = map(counter, 0, 3000, 0, 100);
+
 }
 
 
