@@ -1,4 +1,4 @@
-var ellipseDiameter = map(counter, 0, 3000, 0, 100);
+
 
 function setup() {
   // Create the canvas
@@ -7,7 +7,7 @@ function setup() {
   var canvas = createCanvas(l, h);
   canvas.parent('sketch-holder');
   frameRate(90);
-
+  var ellipseDiameter = map(counter, 0, 3000, 0, 100);
   var ellipseX=mouseX;
   var ellipseY=mouseY;
   var rangeOpacity=mouseX;
