@@ -11,14 +11,14 @@ function setup() {
   var ellipseX=mouseX;
   var ellipseY=mouseY;
   var rangeOpacity=mouseX;
-    var diameter= 300 - counter;
+
 
 }
 
 
 function draw() {
   background('rgba(255,255,255, 1)');
-
+  var diameter= 300 - counter;
 
   // MOUSE ellipse
   var coloreCerchio = color(r, g, bl);
