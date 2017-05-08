@@ -11,6 +11,7 @@ function setup() {
   var ellipseX=mouseX;
   var ellipseY=mouseY;
   var rangeOpacity=mouseX;
+  var diameter= 100 - (counter/50);
 
 }
 
@@ -31,7 +32,7 @@ function draw() {
   fill('rgba(255, 117, 117, 0.5 )');
   strokeWeight(0);
   stroke(255, 117, 117);
-  ellipse(110, 815, counter, counter);
+  ellipse(110, 815, diameter, diameter);
 
 
   // BORDER
