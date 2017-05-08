@@ -53,8 +53,9 @@
     var step3 = 0;
     var searchCommand = [];
     var ellipseDiameter;
-    var diameter;
+
     var counter = 0;
+    var diameter= 300 - counter;
     var reduce = (counter+1)/50;
     var a = 200;
     var b = 200;
@@ -76,7 +77,7 @@
       {
         counter++;
         //console.log(counter);
-        if (counter >= 300) {
+        if (counter >= 3000) {
           console.log("time out");
           clearInterval(myTimer);
           step1=1;
@@ -84,7 +85,7 @@
           step3=0;
           counter = 0;
         }
-      }, 100);
+      }, 10);
     }
     // TIMER FUNCTION
 
