@@ -11,7 +11,7 @@ function setup() {
   var ellipseX=mouseX;
   var ellipseY=mouseY;
   var rangeOpacity=mouseX;
-  var diameter= 100 - ((counter+1)/50);
+  var diameter= 100 - reduce;
 
 }
 
