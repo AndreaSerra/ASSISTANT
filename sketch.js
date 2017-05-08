@@ -8,9 +8,6 @@ function setup() {
   canvas.parent('sketch-holder');
   frameRate(90);
   var ellipseDiameter = map(counter, 0, 3000, 0, 100);
-  
-
-
 }
 
 
