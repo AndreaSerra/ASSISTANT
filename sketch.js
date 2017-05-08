@@ -11,7 +11,7 @@ function setup() {
   var ellipseX=mouseX;
   var ellipseY=mouseY;
   var rangeOpacity=mouseX;
-  var diameter= 100 - reduce;
+
 
 }
 
@@ -19,7 +19,7 @@ function setup() {
 function draw() {
   background('rgba(255,255,255, 1)');
 
-
+  var diameter= 100 - reduce;
   // MOUSE ellipse
   var coloreCerchio = color(r, g, bl);
   fill(coloreCerchio);
