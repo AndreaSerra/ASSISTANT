@@ -1,4 +1,4 @@
-var ellipseDiameter = 0;
+var diameter = 0;
 
 function setup() {
   // Create the canvas
@@ -13,9 +13,8 @@ function setup() {
 
 function draw() {
   background('rgba(255,255,255, 1)');
-  //var diameter= 300 - (reduce);
-  var ellipseDiameter = map(counter, 0, 3000, 0, 100);
-  console.log(ellipseDiameter);
+  var diameter = map(counter, 0, 3000, 100, 0);
+  console.log(diameter);
   // MOUSE ellipse
   var coloreCerchio = color(r, g, bl);
   fill(coloreCerchio);
@@ -28,7 +27,7 @@ function draw() {
   fill('rgba(255, 117, 117, 0.5 )');
   strokeWeight(0);
   stroke(255, 117, 117);
-  ellipse(110, 815, ellipseDiameter, ellipseDiameter);
+  ellipse(110, 815, diameter, diameter);
 
 
   // BORDER
