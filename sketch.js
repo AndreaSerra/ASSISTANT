@@ -31,7 +31,7 @@ function draw() {
   fill('rgba(255, 117, 117, 0.5 )');
   strokeWeight(0);
   stroke(255, 117, 117);
-  ellipse(110, 815, ellipseDiameter, ellipseDiameter);
+  ellipse(110, 815, counter, counter);
 
 
   // BORDER
