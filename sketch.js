@@ -1,4 +1,4 @@
-
+var ellipseDiameter = 0;
 
 function setup() {
   // Create the canvas
