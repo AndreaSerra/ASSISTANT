@@ -14,7 +14,7 @@ function setup() {
 function draw() {
   background('rgba(255,255,255, 1)');
   var diameter = map(counter, 0, 3000, 100, 0);
-  console.log(diameter);
+  //console.log(diameter);
   // MOUSE ellipse
   var coloreCerchio = color(r, g, bl);
   fill(coloreCerchio);

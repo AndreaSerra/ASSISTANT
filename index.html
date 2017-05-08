@@ -74,7 +74,7 @@
       var myTimer = setInterval(function()
       {
         counter++;
-        console.log(counter);
+        //console.log(counter);
         if (counter >= 3000) {
           console.log("time out");
           clearInterval(myTimer);
@@ -153,7 +153,7 @@
 
           transcription.innerHTML = final_transcript;
           interim_span.innerHTML = interim_transcript;
-          console.log(counter);
+          //console.log(counter);
           searchCommand = transcription.innerHTML.split(" ");
           console.log(searchCommand);
           for (i = 0; i < searchCommand.length; i++) {
