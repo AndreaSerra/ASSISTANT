@@ -23,7 +23,7 @@ function draw() {
     diameter = 75;
     var border = 20;
   } else {
-    var diameter = map(counter, 0, 3000, 175, 60);
+    var diameter = map(counter, 0, 3000, 175, 50);
     var border = 20;
   }
 
@@ -39,7 +39,7 @@ function draw() {
   fill(coloreCerchio);
   strokeWeight(0);
   stroke(255, 117, 117);
-  ellipse(mouseX, mouseY, a, b);
+  ellipse(mouseX, mouseY, a, a);
 
 
   // FIXED ellipse
