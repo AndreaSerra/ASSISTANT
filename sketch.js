@@ -9,7 +9,7 @@ function setup() {
   canvas.parent('sketch-holder');
   frameRate(90);
   var diameter = 50;
-  var border = 15;
+  var border = 20;
 }
 
 
@@ -20,10 +20,10 @@ function draw() {
     border = 0;
   } else if (attention == 1) {
     diameter = 100;
-    border = 15;
+    border = 20;
   } else {
-    var diameter = map(counter, 0, 3000, 150, 75);
-    var border = map(counter, 0, 3000, 20, 15);
+    var diameter = map(counter, 0, 3000, 150, 65);
+    var border = map(counter, 0, 3000, 25, 20);
   }
 
 
