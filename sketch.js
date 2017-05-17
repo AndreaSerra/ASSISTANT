@@ -24,7 +24,6 @@ function draw() {
   strokeWeight(0);
   fill(255);
   rect(480, 230, 600, 600);
-  }
 
 
   // MOUSE ellipse
