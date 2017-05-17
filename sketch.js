@@ -66,9 +66,9 @@ function draw() {
 function keyPressed() {
   if (keyCode === LEFT_ARROW) {
     attention = 1;
-    awakeSound.play();
+    //awakeSound.play();
   } else if (keyCode === RIGHT_ARROW) {
     attention = 0;
-    byeSound.play();
+    //byeSound.play();
   }
 }
