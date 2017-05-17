@@ -50,10 +50,10 @@ function draw() {
 
   // BORDER
   strokeWeight(border);
-  if (attention == 0) {
+  if (attention == 0 || attention == 1) {
     strokeWeight(border);
     stroke('rgba(255, 117, 117, 0)');
-  } else if (attention >= 0){
+  } else if (attention == 2){
     strokeWeight(border);
     stroke('rgba(255, 117, 117, 0.5)');
   }
