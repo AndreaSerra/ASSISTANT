@@ -1,5 +1,6 @@
 var diameter;
 var border;
+var colorBorder;
 
 function setup() {
   // Create the canvas
@@ -10,6 +11,8 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
+  var colorBorder = 'rgba(255, 117, 117, 0.5)';
+  var colorTransparent = 'rgba(255, 117, 117, 0)';
 }
 
 
@@ -17,13 +20,10 @@ function draw() {
   background('rgba(210,210,210, 1)');
   if (attention == 0) {
     diameter = 0;
-    border = 0;
   } else if (attention == 1) {
     diameter = 100;
-    border = 20;
   } else {
     var diameter = map(counter, 0, 3000, 150, 65);
-    var border = map(counter, 0, 3000, 25, 20);
   }
 
 
@@ -50,7 +50,11 @@ function draw() {
 
   // BORDER
   strokeWeight(border);
-  stroke('rgba(255, 117, 117, 0.5)');
+  if (attention = 0;) {
+    stroke(colorTransparent);
+  } else {
+    stroke(colorBorder);
+  }
   noFill();
   rect(10, 10, 1883, 905);
 }
