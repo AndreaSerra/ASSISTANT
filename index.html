@@ -78,12 +78,12 @@
     // VISIBLE FUNCTION
     function visible(active) {
       if (active == true){
-        interim_span.style.display = 'inline';
-        transcription.style.display = 'inline';
+        document.getElementById("speech").style.display = "inline";
+        document.getElementById("interim").style.display = "inline";
         //console.log("YESSS");
       } else {
-        interim_span.style.display = 'none';
-        transcription.style.display = 'none';
+        document.getElementById("speech").style.display = "none";
+        document.getElementById("interim").style.display = "none";
       }
     }
     // VISIBLE FUNCTION
