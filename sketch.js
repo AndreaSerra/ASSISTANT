@@ -1,4 +1,5 @@
 var diameter = 0;
+var canvasBorder = 0;
 
 function setup() {
   // Create the canvas
@@ -14,7 +15,17 @@ function setup() {
 function draw() {
   background('rgba(255,255,255, 1)');
   var diameter = map(counter, 0, 3000, 100, 0);
+  var canvasBorder = map(counter, 0, 3000, 20, 0);
   //console.log(diameter);
+
+
+  // PAGE
+  strokeWeight(0);
+  fill(255);
+  rect(480, 230, 600, 600);
+  }
+
+
   // MOUSE ellipse
   var coloreCerchio = color(r, g, bl);
   fill(coloreCerchio);
@@ -31,8 +42,16 @@ function draw() {
 
 
   // BORDER
-  strokeWeight(20);
+  strokeWeight(canvasBorder);
   stroke('rgba(255, 117, 117, 0.5)');
   noFill();
   rect(10, 10, 1883, 905);
+}
+
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    value = 255;
+  } else if (keyCode === RIGHT_ARROW) {
+    value = 0;
+  }
 }
