@@ -50,6 +50,7 @@ function draw() {
 
 
   // BORDER
+  strokeCap(ROUND);
   strokeWeight(border);
   if (attention == 0 || attention == 1) {
     stroke('rgba(255, 117, 117, 0)');
@@ -57,8 +58,7 @@ function draw() {
     strokeWeight(border);
     stroke('rgba(255, 117, 117, 0.5)');
   }
-  strokeCap(ROUND);
-  rect(10, 10, 1900, 20);
+  rect(0, 10, 1880, 20);
 }
 
 
