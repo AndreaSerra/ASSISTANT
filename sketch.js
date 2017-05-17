@@ -15,13 +15,15 @@ function setup() {
 
 function draw() {
   background('rgba(210,210,210, 1)');
-  if (attention == false) {
+  if (attention == 0) {
+    diameter = 0;
+    border = 0;
+  } else if (attention == 1) {
     diameter = 100;
     border = 10;
   } else {
     var diameter = map(counter, 0, 3000, 150, 75);
     var border = map(counter, 0, 3000, 20, 10);
-    //console.log(diameter);
   }
 
 
@@ -54,8 +56,10 @@ function draw() {
 }
 
 
-// function keyPressed() {
-//   if (keyCode === LEFT_ARROW) {
-//   } else if (keyCode === RIGHT_ARROW) {
-//   }
-// }
+function keyPressed() {
+  if (keyCode === LEFT_ARROW) {
+    attention = 1;
+  } else if (keyCode === RIGHT_ARROW) {
+    attention = 0;
+  }
+}
