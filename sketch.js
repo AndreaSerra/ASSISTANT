@@ -20,10 +20,10 @@ function draw() {
     diameter = 0;
     var border = 0;
   } else if (attention == 1) {
-    diameter = 100;
+    diameter = 75;
     var border = 20;
   } else {
-    var diameter = map(counter, 0, 3000, 150, 65);
+    var diameter = map(counter, 0, 3000, 175, 60);
     var border = 20;
   }
 
@@ -43,8 +43,12 @@ function draw() {
 
 
   // FIXED ellipse
+  if (attention == 0 || attention == 1) {
+    strokeWeight(0);
+  } else if (attention == 2){
+    strokeWeight(5);
+  }
   fill('rgba(255, 117, 117, 0.5 )');
-  strokeWeight(0);
   stroke(255, 117, 117);
   ellipse(110, 815, diameter, diameter);
 
