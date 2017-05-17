@@ -54,6 +54,7 @@
     var searchCommand = [];
 
     var counter = 0;
+    var attention = false;
     var reduce = (counter+1)/50;
     var a = 75;
     var b = 75;
@@ -74,6 +75,7 @@
       var myTimer = setInterval(function()
       {
         counter++;
+        attention = true;
         //console.log(counter);
         if (counter >= 3000) {
           console.log("time out");
@@ -82,6 +84,7 @@
           step2=0;
           step3=0;
           counter = 0;
+          attention = false;
         }
       }, 10);
     }

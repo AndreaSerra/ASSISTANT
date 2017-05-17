@@ -15,12 +15,12 @@ function setup() {
 
 function draw() {
   background('rgba(210,210,210, 1)');
-  if (counter = 0) {
+  if (attention = false) {
     diameter = 20;
     border = 1;
   } else {
-    var diameter = map(counter, 1, 3000, 150, 20);
-    var border = map(counter, 1, 3000, 20, 0);
+    var diameter = map(counter, 0, 3000, 150, 20);
+    var border = map(counter, 0, 3000, 20, 0);
     //console.log(diameter);
   }
 
