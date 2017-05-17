@@ -72,6 +72,7 @@ function keyPressed() {
     awakeSound.play();
   } else if (keyCode === RIGHT_ARROW) {
     attention = 0;
+    counter = 0;
     byeSound.play();
   }
 }
