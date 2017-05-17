@@ -52,13 +52,13 @@ function draw() {
   // BORDER
   strokeWeight(border);
   if (attention == 0 || attention == 1) {
-    fill('rgba(255, 117, 117, 0)');
+    stroke('rgba(255, 117, 117, 0)');
   } else if (attention == 2){
     strokeWeight(border);
-    fill('rgba(255, 117, 117, 0.5)');
+    stroke('rgba(255, 117, 117, 0.5)');
   }
   strokeCap(ROUND);
-  rect(10, 10, 1600, 20);
+  rect(10, 10, 1900, 20);
 }
 
 
