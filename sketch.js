@@ -1,5 +1,5 @@
-var diameter = 0;
-var border = 0;
+var diameter;
+var border;
 
 function setup() {
   // Create the canvas
@@ -8,7 +8,8 @@ function setup() {
   var canvas = createCanvas(l, h);
   canvas.parent('sketch-holder');
   frameRate(90);
-
+  var diameter = 0;
+  var border = 0;
 }
 
 
