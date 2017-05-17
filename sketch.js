@@ -1,6 +1,6 @@
 var diameter;
 var border;
-var colorBorder;
+var colorTransparent;
 
 function setup() {
   // Create the canvas
