@@ -8,14 +8,14 @@ function setup() {
   var canvas = createCanvas(l, h);
   canvas.parent('sketch-holder');
   frameRate(90);
-  var diameter = 0;
+  var diameter = 20;
   var border = 0;
 }
 
 
 function draw() {
   background('rgba(210,210,210, 1)');
-  var diameter = map(counter, 0, 3000, 100, 0);
+  var diameter = map(counter, 0, 3000, 100, 20);
   var border = map(counter, 0, 3000, 20, 0);
   //console.log(diameter);
 
