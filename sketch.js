@@ -14,7 +14,7 @@ function setup() {
 
 
 function draw() {
-  background('rgba(255,255,255, 1)');
+  background('rgba(210,210,210, 1)');
   var diameter = map(counter, 0, 3000, 100, 0);
   var border = map(counter, 0, 3000, 20, 0);
   //console.log(diameter);
@@ -30,7 +30,7 @@ function draw() {
   var coloreCerchio = color(r, g, bl);
   fill(coloreCerchio);
   strokeWeight(0);
-  stroke(255, 50, 50);
+  stroke(255, 117, 117);
   ellipse(mouseX, mouseY, a, b);
 
 
