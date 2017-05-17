@@ -15,7 +15,7 @@ function setup() {
 
 function draw() {
   background('rgba(210,210,210, 1)');
-  if (attention = false) {
+  if (attention == false) {
     diameter = 20;
     border = 1;
   } else {
