@@ -13,9 +13,7 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
-  var awakeSound = loadSound('sounds/awake.mp3');;
-  var getItSound = loadSound('sounds/getIt.mp3');;
-  var byeSound = loadSound('sounds/bye.mp3');;
+
 }
 
 
@@ -69,6 +67,9 @@ function draw() {
 
 
 function keyPressed() {
+  var awakeSound = loadSound('sounds/awake.mp3');;
+  var getItSound = loadSound('sounds/getIt.mp3');;
+  var byeSound = loadSound('sounds/bye.mp3');;
   if (keyCode === LEFT_ARROW) {
     attention = 1;
     awakeSound.play();
