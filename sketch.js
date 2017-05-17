@@ -47,9 +47,9 @@ function draw() {
 
   // BORDER
   strokeWeight(border);
-  if (attention = 0) {
+  if (attention == 0) {
     stroke('rgba(255, 117, 117, 0)');
-  } else {
+  } else if (attention >= 0){
     stroke('rgba(255, 117, 117, 0.5)');
   }
   noFill();
