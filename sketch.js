@@ -8,7 +8,7 @@ function setup() {
   var canvas = createCanvas(l, h);
   canvas.parent('sketch-holder');
   frameRate(90);
-  var diameter = 20;
+  var diameter = 50;
   var border = 0;
 }
 
@@ -16,10 +16,10 @@ function setup() {
 function draw() {
   background('rgba(210,210,210, 1)');
   if (attention == false) {
-    diameter = 20;
-    border = 1;
+    diameter = 75;
+    border = 0;
   } else {
-    var diameter = map(counter, 0, 3000, 150, 20);
+    var diameter = map(counter, 0, 3000, 150, 50);
     var border = map(counter, 0, 3000, 20, 0);
     //console.log(diameter);
   }
