@@ -55,6 +55,7 @@
 
     var counter = 0;
     var attention = 0;
+    var active = false;
     var reduce = (counter+1)/50;
     var a = 50;
     var r = 100;
@@ -74,6 +75,19 @@
     }
     // "OPEN IN CHROME" ALERT FUNCTION
 
+    // VISIBLE FUNCTION
+    function visible(active) {
+      if (active == true){
+        interim_span.style.display = 'inline';
+        transcription.style.display = 'inline';
+        //console.log("YESSS");
+      } else {
+        interim_span.style.display = 'none';
+        transcription.style.display = 'none';
+      }
+    }
+    // VISIBLE FUNCTION
+
     // TIMER FUNCTION
     var globalTimer = function(){
       var myTimer = setInterval(function()
@@ -90,6 +104,7 @@
           counter = 0;
           attention = 1;
           timeOut.play();
+          visible(false);
         }
       }, 10);
     }
@@ -116,15 +131,6 @@
           interim_span.innerHTML = '';
           transcription.innerHTML = '';
           speech.start();
-        }
-
-        function visible(active) {
-          if (active == true){
-            interim_span.style.opacity = '0.7';
-            console.log("YESSS");
-          } else {
-            interim_span.style.opacity = '0.0';
-          }
         }
         //CUSTOM FUNCTIONS inside the speechrecognition function, not global
 
@@ -170,8 +176,8 @@
               case 0: break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "okay" : globalTimer(); step1 = 0; step2=1; step3=0; console.log("timer counting"); getItSound.play();;break;
-                  case "Okay" : globalTimer(); step1 = 0; step2=1; step3=0; console.log("timer counting"); getItSound.play();;break;
+                  case "okay" : globalTimer(); step1 = 0; step2=1; step3=0; console.log("timer counting"); visible(true); getItSound.play();;break;
+                  case "Okay" : globalTimer(); step1 = 0; step2=1; step3=0; console.log("timer counting"); visible(true); getItSound.play();;break;
                 } break;
             }
             switch (step2){
