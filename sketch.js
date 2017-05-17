@@ -23,7 +23,7 @@ function draw() {
   // PAGE
   strokeWeight(0);
   fill(255);
-  rect(150, 150, 1620, 600);
+  rect(250, 175, 1420, 850);
 
 
   // MOUSE ellipse
