@@ -50,7 +50,7 @@ function draw() {
 
   // BORDER
   strokeWeight(border);
-  if (attention = 0;) {
+  if (attention = 0) {
     stroke(colorTransparent);
   } else {
     stroke(colorBorder);
