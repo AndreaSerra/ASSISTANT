@@ -67,10 +67,10 @@ function draw() {
 
 
 function keyPressed() {
-  if (keyCode === LEFT_ARROW) {
+  if (keyCode === ENTER) {
     attention = 1;
     awakeSound.play();
-  } else if (keyCode === RIGHT_ARROW) {
+  } else if (keyCode === SHIFT) {
     attention = 0;
     counter = 0;
     byeSound.play();
