@@ -17,10 +17,13 @@ function draw() {
   background('rgba(210,210,210, 1)');
   if (attention == 0) {
     diameter = 0;
+    var border = 20;
   } else if (attention == 1) {
     diameter = 100;
+    var border = 20;
   } else {
     var diameter = map(counter, 0, 3000, 150, 65);
+    var border = 20;
   }
 
 
