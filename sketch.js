@@ -62,7 +62,7 @@ function draw() {
     strokeWeight(border);
     stroke('rgba(255, 117, 117, 0.5)');
   }
-  rect(0, 0, 1920, 1);
+  rect(0, 0, 600, 1);
 }
 
 
