@@ -24,7 +24,7 @@ function draw() {
     var border = 20;
   } else {
     var diameter = map(counter, 0, 3000, 150, 65);
-    var border = 20;
+    var border = 0;
   }
 
 
@@ -58,7 +58,7 @@ function draw() {
     strokeWeight(border);
     stroke('rgba(255, 117, 117, 0.5)');
   }
-  rect(0, 0, 1900, 20);
+  rect(0, 0, 1900, 1);
 }
 
 
