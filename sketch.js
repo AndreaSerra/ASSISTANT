@@ -42,7 +42,7 @@ function draw() {
 
 
   // BORDER
-  strokeWeight(canvasBorder);
+  strokeWeight(border);
   stroke('rgba(255, 117, 117, 0.5)');
   noFill();
   rect(10, 10, 1883, 905);
