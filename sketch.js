@@ -1,6 +1,5 @@
 var diameter;
 var border;
-var colorTransparent;
 
 function setup() {
   // Create the canvas
@@ -11,8 +10,6 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
-  var colorBorder = 'rgba(255, 117, 117, 0.5)';
-  var colorTransparent = 'rgba(255, 117, 117, 0)';
 }
 
 
@@ -51,9 +48,9 @@ function draw() {
   // BORDER
   strokeWeight(border);
   if (attention = 0) {
-    stroke(colorTransparent);
+    stroke('rgba(255, 117, 117, 0)');
   } else {
-    stroke(colorBorder);
+    stroke('rgba(255, 117, 117, 0.5)');
   }
   noFill();
   rect(10, 10, 1883, 905);
