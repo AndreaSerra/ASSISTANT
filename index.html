@@ -178,8 +178,8 @@
               case 0: break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "assistant" : globalTimer(); step1 = 0; step2=1; step3=0; console.log("timer counting"); visible(true); getItSound.play();;break;
-                  case "Assistant" : globalTimer(); step1 = 0; step2=1; step3=0; console.log("timer counting"); visible(true); getItSound.play();;break;
+                  case "assistant" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
+                  case "Assistant" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
                 } break;
             }
             switch (step2){
@@ -194,14 +194,14 @@
               case 0:  break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "yellow" : event.results=null; col='#FFD480';  console.log("red"); step2=1; step3=0; getItSound.play();  break;
-                  case "green" : event.results=null;  col='#32ffaa';  console.log("green"); step2=1; step3=0; getItSound.play();  break;
-                  case "blue" : event.results=null; col='#2772DB';  console.log("blue"); step2=1; step3=0; getItSound.play();  break;
-                  case "Yellow" : event.results=null; col='#FFD480';  console.log("Red"); step2=1; step3=0; getItSound.play();  break;
-                  case "Green" : event.results=null;  col='#32ffaa'; console.log("Green"); step2=1; step3=0;getItSound.play();  break;
-                  case "Blue" : event.results=null;  col='#2772DB';  console.log("Blue"); step2=1; step3=0; getItSound.play();  break;
-                  case "white" : event.results=null;  col='#ffffff';  console.log("white"); step2=1; step3=0; getItSound.play();  break;
-                  case "white" : event.results=null;  col='#ffffff';  console.log("white"); step2=1; step3=0; getItSound.play();  break;
+                  case "yellow" : event.results=null; col='#FFD480';  step2=1; step3=0; getItSound.play();  break;
+                  case "green" : event.results=null;  col='#32ffaa';   step2=1; step3=0; getItSound.play();  break;
+                  case "blue" : event.results=null; col='#2772DB';  step2=1; step3=0; getItSound.play();  break;
+                  case "Yellow" : event.results=null; col='#FFD480';  tep2=1; step3=0; getItSound.play();  break;
+                  case "Green" : event.results=null;  col='#32ffaa';  step2=1; step3=0;getItSound.play();  break;
+                  case "Blue" : event.results=null;  col='#2772DB';  step2=1; step3=0; getItSound.play();  break;
+                  case "white" : event.results=null;  col='#ffffff';   step2=1; step3=0; getItSound.play();  break;
+                  case "white" : event.results=null;  col='#ffffff';   step2=1; step3=0; getItSound.play();  break;
                 } break;
             }
 
