@@ -120,7 +120,7 @@ function draw() {
 //    stroke('rgba(255, 117, 117, 0.5)');
 //  }
 //  rect(0, 925, 1900, 1);
-//}
+}
 
 
 function keyPressed() {
