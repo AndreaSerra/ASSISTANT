@@ -32,9 +32,9 @@ function Particle(x, y, brush) {
       this.history[i].x;
       this.history[i].y;
     }
-  //  for (var i = 0; i < this.colore.length; i++) {
-  //     this.colore.push(brush);
-  //  }
+    for (var i = 0; i < this.colore.length; i++) {
+       this.colore.push(brush);
+    }
 
     var v = createVector(this.x, this.y);
     if (mouseIsPressed){
