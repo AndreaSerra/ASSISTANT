@@ -39,7 +39,6 @@ function Particle(x, y, brush) {
     var v = createVector(this.x, this.y);
     if (mouseIsPressed){
       this.history.push(v);
-      console.log(this.colore[i]);
     }
   }
   // UPDATE FUNCTION
@@ -64,7 +63,7 @@ function Particle(x, y, brush) {
 
 
 function mousePressed() {
-  particles.push(new Particle(mouseX, mouseY));
+  particles.push(new Particle(mouseX, mouseY,col));
 }
 
 
