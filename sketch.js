@@ -26,13 +26,11 @@ function Particle(x, y) {
   // UPDATE FUNCTION
   // SHOW FUNCTION
   this.show = function() {
-    fill(0, 150);
+    var coloreCerchio = color(r, g, bl);
+    fill(coloreCerchio);
     ellipse(this.x, this.y, 24, 24);
-
     for (var i = 0; i < this.history.length; i++) {
       var pos = this.history[i];
-      var coloreCerchio = color(r, g, bl);
-      fill(coloreCerchio);
       noStroke();
       ellipse(pos.x, pos.y, a, a);
     }
