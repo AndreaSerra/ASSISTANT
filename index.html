@@ -204,7 +204,7 @@
             // When recognition begins
             recognizing = true;
             interim_span.style.opacity = '0.5';
-          //  console.log("speech recognition ON")
+            console.log("speech recognition ON")
         };
         // START FUNCTION
 
@@ -234,8 +234,8 @@
               case 0: break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
-                  case "Okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
+                  case "okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play(); break;
+                  case "Okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play(); break;
                 } break;
             }
             switch (step2){
