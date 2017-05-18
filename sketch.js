@@ -78,7 +78,7 @@ function draw() {
     diameter = 75;
     var border = 20;
   } else {
-    var diameter = map(counter, 0, 300, 175, 50);
+    var diameter = map(counter, 0, 3000, 175, 50);
     var border = 20;
   }
 
