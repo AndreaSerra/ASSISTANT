@@ -186,8 +186,8 @@
               case 0: break;
               case 1:
               switch (searchCommand[i]) {
-                case "color" : step2=0; step3 = 1;  console.log("circle, step3: ", step3);   break;
-                case "Color" : step2=0; step3 = 1;  console.log("Circle, step3: ", step3);   break;
+                case "color" : step2=0; step3 = 1;  break;
+                case "Color" : step2=0; step3 = 1;  break;
               } break;
             }
             switch (step3) {
@@ -202,8 +202,6 @@
                   case "Blue" : event.results=null;  col='#2772DB';  console.log("Blue"); step2=1; step3=0; getItSound.play();  break;
                   case "white" : event.results=null;  col='#ffffff';  console.log("white"); step2=1; step3=0; getItSound.play();  break;
                   case "white" : event.results=null;  col='#ffffff';  console.log("white"); step2=1; step3=0; getItSound.play();  break;
-                  case "black" : event.results=null;  col='#393E46';  console.log("grey"); step2=1; step3=0; getItSound.play();  break;
-                  case "black" : event.results=null;  col='#393E46';  console.log("grey"); step2=1; step3=0; getItSound.play();  break;
                 } break;
             }
 
