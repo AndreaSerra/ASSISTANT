@@ -13,8 +13,8 @@ function setup() {
   var canvas = createCanvas(l, h);
   canvas.parent('sketch-holder');
   frameRate(30);
-  var diameter = 50;
-  var border = 20;
+  //var diameter = 50;
+  //var border = 20;
 }
 
 
@@ -112,15 +112,15 @@ function draw() {
 
 
   // BORDER
-  if (attention == 0 || attention == 1) {
-    strokeWeight(0);
-    stroke('rgba(255, 117, 117, 0)');
-  } else if (attention == 2){
+//  if (attention == 0 || attention == 1) {
+//    strokeWeight(0);
+//    stroke('rgba(255, 117, 117, 0)');
+//  } else if (attention == 2){
     strokeWeight(border);
     stroke('rgba(255, 117, 117, 0.5)');
   }
-  rect(0, 925, 1900, 1);
-}
+//  rect(0, 925, 1900, 1);
+//}
 
 
 function keyPressed() {
