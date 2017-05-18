@@ -1,5 +1,6 @@
 var diameter;
 var border;
+var col;
 var particles = [];
 
 
@@ -13,9 +14,7 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
-  var rd = 100;
-  var gr = 100;
-  var blu = 100;
+  var col = r,g,bl;
 }
 
 
@@ -24,7 +23,7 @@ function Particle(x, y) {
   // VARIABLES
   this.x = x;
   this.y = y;
-  this.col = r,g,bl;
+  this.col = col;
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
