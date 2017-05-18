@@ -24,6 +24,7 @@ function Particle(x, y) {
   this.y = y;
   this.colore = colore;
   this.history = [];
+  this.historycol = [];
   // UPDATE FUNCTION
   this.update = function() {
     this.x = mouseX;
@@ -32,11 +33,14 @@ function Particle(x, y) {
     for (var i = 0; i < this.history.length; i++) {
       this.history[i].x;
       this.history[i].y;
-      this.history[i].colore;
     }
-    var v = createVector(this.x, this.y,this.colore);
+    for (var i = 0; i < this.historycol.length; i++) {
+      this.historycol[i].colore;
+    }
+    var v = createVector(this.x, this.y);
     if (mouseIsPressed){
       this.history.push(v);
+      this.historycol.push(this.colore);
     }
   }
   // UPDATE FUNCTION
