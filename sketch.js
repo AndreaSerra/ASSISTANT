@@ -1,7 +1,6 @@
 var diameter;
 var border;
 var particles = [];
-var colore = col;
 
 // SKETCH
 function setup() {
@@ -13,7 +12,6 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
-  var colore = col;
 }
 
 
@@ -84,6 +82,8 @@ function draw() {
 
   // MOUSE ellipse
   for (var i = 0; i < particles.length; i++) {
+    var coloreCerchio = col;
+    fill(coloreCerchio);
     particles[i].update();
     particles[i].show();
   }
