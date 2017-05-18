@@ -1,7 +1,26 @@
 var diameter;
 var border;
 var particles = [];
+var rd;
+var gr;
+var blu;
 
+
+
+// SKETCH
+function setup() {
+  // Create the canvas
+  var l = 1920;
+  var h = 925;
+  var canvas = createCanvas(l, h);
+  canvas.parent('sketch-holder');
+  frameRate(90);
+  var diameter = 50;
+  var border = 20;
+  var rd = 100;
+  var gr = 100;
+  var blu = 100;
+}
 
 
 // BRUSH OBJ
@@ -17,15 +36,15 @@ function Particle(x, y) {
   this.update = function() {
     this.x = mouseX;
     this.y = mouseY;
-    this.r = r;
-    this.g = g;
-    this.bl = bl;
+    this.rd = r;
+    this.gr = g;
+    this.blu = bl;
     for (var i = 0; i < this.history.length; i++) {
       this.history[i].x;
       this.history[i].y;
-      this.history[i].r;
-      this.history[i].g;
-      this.history[i].bl;
+      this.history[i].rd;
+      this.history[i].gr;
+      this.history[i].blu;
     }
     var v = createVector(this.x, this.y);
     if (mouseIsPressed){
@@ -39,7 +58,7 @@ function Particle(x, y) {
   this.show = function() {
     ellipse(this.x, this.y, 24, 24);
     for (var i = 0; i < this.history.length; i++) {
-      fill(color(this.history[i].r, this.history[i].g, this.history[i].bl));
+      fill(color(this.history[i].rd, this.history[i].gr, this.history[i].blu));
       noStroke();
       ellipse(this.history.x, this.history.y, a, a);
 
@@ -51,20 +70,6 @@ function Particle(x, y) {
 
 
 
-
-
-
-// SKETCH
-function setup() {
-  // Create the canvas
-  var l = 1920;
-  var h = 925;
-  var canvas = createCanvas(l, h);
-  canvas.parent('sketch-holder');
-  frameRate(90);
-  var diameter = 50;
-  var border = 20;
-}
 
 
 function mousePressed() {
