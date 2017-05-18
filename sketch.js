@@ -19,7 +19,7 @@ function Particle(x, y) {
       var r1 = r, g1 = g, b1 = bl;
       this.history[i].x;
       this.history[i].y;
-      this.coloreCerchio[i].color(r1, g1, b1);
+      this.coloreCerchio[i];
     }
     var v = createVector(this.x, this.y);
     if (mouseIsPressed){
