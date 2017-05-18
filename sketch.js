@@ -9,17 +9,23 @@ function Particle(x, y) {
   // VARIABLES
   this.x = x;
   this.y = y;
-  this.coloreCerchio = color(r, g, bl);
+  this.r = r;
+  this.g = g;
+  this.bl = bl;
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
     this.x = mouseX;
     this.y = mouseY;
+    this.r = r;
+    this.g = g;
+    this.bl = bl;
     for (var i = 0; i < this.history.length; i++) {
-      var r1 = r, g1 = g, b1 = bl;
       this.history[i].x;
       this.history[i].y;
-      this.coloreCerchio[i];
+      this.history[i].r;
+      this.history[i].g;
+      this.history[i].bl;
     }
     var v = createVector(this.x, this.y);
     if (mouseIsPressed){
@@ -27,11 +33,13 @@ function Particle(x, y) {
     }
   }
   // UPDATE FUNCTION
+
+
   // SHOW FUNCTION
   this.show = function() {
     ellipse(this.x, this.y, 24, 24);
     for (var i = 0; i < this.history.length; i++) {
-      fill(this.coloreCerchio);
+      fill(color(this.history[i].r, this.history[i].g, this.history[i].bl));
       noStroke();
       ellipse(this.history.x, this.history.y, a, a);
     }
