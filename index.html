@@ -96,7 +96,7 @@
         counter++;
         attention = 2;
         //console.log(counter);
-        if (counter >= 2000) {
+        if (counter >= 4000) {
           console.log("time out");
           clearInterval(myTimer);
           step1=1;
@@ -107,7 +107,7 @@
           timeOut.play();
           visible(false);
         }
-      }, 10);
+      }, 20);
     }
     // TIMER FUNCTION
 
@@ -178,8 +178,8 @@
               case 0: break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "assistant" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
-                  case "Assistant" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
+                  case "okay" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
+                  case "Okay" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
                 } break;
             }
             switch (step2){
