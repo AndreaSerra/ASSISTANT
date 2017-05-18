@@ -61,7 +61,7 @@
     var r = 100;
     var g = 100;
     var bl = 100;
-    var col= '#adadad';
+    var col= '#ffffff';
 
 
     var awakeSound = new Audio('sounds/awake.mp3');
@@ -194,12 +194,14 @@
               case 0:  break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "red" : event.results=null; col='#d63131';  console.log("red"); step2=1; step3=0; break;
-                  case "green" : event.results=null;  col='#32ffaa';  console.log("green"); step2=1; step3=0; break;
-                  case "blue" : event.results=null; col='#283ca0';  console.log("blue"); step2=1; step3=0; break;
-                  case "Red" : event.results=null; col='#d63131';  console.log("Red"); step2=1; step3=0; break;
-                  case "Green" : event.results=null;  col='#32ffaa'; console.log("Green"); step2=1; step3=0; break;
-                  case "Blue" : event.results=null;  col='#283ca0';  console.log("Blue"); step2=1; step3=0; break;
+                  case "red" : event.results=null; col='#FFD480';  console.log("red"); step2=1; step3=0; getItSound.play();  break;
+                  case "green" : event.results=null;  col='#32ffaa';  console.log("green"); step2=1; step3=0; getItSound.play();  break;
+                  case "blue" : event.results=null; col='#2772DB';  console.log("blue"); step2=1; step3=0; getItSound.play();  break;
+                  case "Red" : event.results=null; col='#FFD480';  console.log("Red"); step2=1; step3=0; getItSound.play();  break;
+                  case "Green" : event.results=null;  col='#32ffaa'; console.log("Green"); step2=1; step3=0;getItSound.play();  break;
+                  case "Blue" : event.results=null;  col='#2772DB';  console.log("Blue"); step2=1; step3=0; getItSound.play();  break;
+                  case "eraser" : event.results=null;  col='#ffffff';  console.log("grey"); step2=1; step3=0; getItSound.play();  break;
+                  case "eraser" : event.results=null;  col='#ffffff';  console.log("grey"); step2=1; step3=0; getItSound.play();  break;
                 } break;
             }
 
