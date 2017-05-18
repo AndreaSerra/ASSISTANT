@@ -50,8 +50,8 @@ function Particle(x, y, brush) {
     ellipse(this.x, this.y, 24, 24);
     for (var i = 0; i < this.history.length; i++) {
       var pos = this.history[i];
-      fill(this.colore[i]);
       noStroke();
+      fill(this.colore[i]);
       ellipse(pos.x, pos.y, a, a);
 
     }
