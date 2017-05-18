@@ -41,7 +41,6 @@ function Particle(x, y) {
   this.show = function() {
     ellipse(this.x, this.y, 24, 24);
     for (var i = 0; i < this.history.length; i++) {
-      fill(colore);
       noStroke();
       ellipse(this.history.x, this.history.y, a, a);
 
