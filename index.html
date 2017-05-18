@@ -118,6 +118,25 @@
     }
     // VISIBLE FUNCTION
 
+    // ANIMATION FUNCTION
+    function animation(status) {
+      var feedback = $("#feedback");
+      if (status == "animate"){
+        feedback.addClass("animate")
+        setTimeout(function(){ animation("show"); visible(false);}, 30000);
+        //time
+      }
+      if (status == "show") {
+        feedback.addClass("show");
+        visible(false);
+      }
+      if (status == false) {
+        feedback.removeClass("show animate");
+        visible(false);
+      }
+    }
+    // ANIMATION FUNCTION
+
 
    // TIMER FUNCTION
   //  var globalTimer = function(){
@@ -142,24 +161,7 @@
     // TIMER FUNCTION
 
 
-    // ANIMATION FUNCTION
-    function animation(status) {
-      var feedback = $("#feedback");
-      if (status == "animate"){
-        feedback.addClass("animate")
-        setTimeout(function(){ animation("show"); visible(false);}, 30000);
-        //time
-      }
-      if (status == "show") {
-        feedback.addClass("show");
-        visible(false);
-      }
-      if (status == false) {
-        feedback.removeClass("show animate");
-        visible(false);
-      }
-    }
-    // ANIMATION FUNCTION
+
 
 
 
