@@ -125,11 +125,11 @@
       var feedback = $("#feedback");
       if (status == "animate"){
         feedback.addClass("animate")
-        setTimeout(function(){ animation("show"); visible(true);}, 30000);
+        setTimeout(function(){ feedback.removeClass("animate"); feedback.addClass("show"); visible(true);}, 20000);
         //time
       }
       if (status == "show") {
-        feedback.removeClass("animate")
+        feedback.removeClass("animate");
         feedback.addClass("show");
         visible(true);
       }
