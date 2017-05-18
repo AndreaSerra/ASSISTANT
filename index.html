@@ -96,7 +96,7 @@
         counter++;
         attention = 2;
         //console.log(counter);
-        if (counter >= 30000) {
+        if (counter >= 2000) {
           console.log("time out");
           clearInterval(myTimer);
           step1=1;
@@ -107,7 +107,7 @@
           timeOut.play();
           visible(false);
         }
-      }, 1);
+      }, 10);
     }
     // TIMER FUNCTION
 
