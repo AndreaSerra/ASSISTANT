@@ -9,9 +9,6 @@ function Particle(x, y) {
   // VARIABLES
   this.x = x;
   this.y = y;
-  this.r = r;
-  this.g = g;
-  this.bl = bl;
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
@@ -42,6 +39,7 @@ function Particle(x, y) {
       fill(color(this.history[i].r, this.history[i].g, this.history[i].bl));
       noStroke();
       ellipse(this.history.x, this.history.y, a, a);
+
     }
   }
   // SHOW FUNCTION
