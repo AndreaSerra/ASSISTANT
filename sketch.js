@@ -9,6 +9,9 @@ function Particle(x, y) {
   // VARIABLES
   this.x = x;
   this.y = y;
+  this.r  ;
+  this.g  ;
+  this.bl  ;
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
