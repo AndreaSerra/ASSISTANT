@@ -16,17 +16,18 @@ function setup() {
 
 
 // BRUSH OBJ
-function Particle(x, y) {
+function Particle(x, y, brush) {
   // VARIABLES
   this.x = x;
   this.y = y;
-  this.brush = col;
+  this.brush = brush;
   this.colore = [];
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
     this.x = mouseX;
     this.y = mouseY;
+    this.brush = col;
     for (var i = 0; i < this.history.length; i++) {
       this.history[i].x;
       this.history[i].y;
