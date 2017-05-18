@@ -41,6 +41,8 @@ function Particle(x, y) {
   this.show = function() {
     ellipse(this.x, this.y, 24, 24);
     for (var i = 0; i < this.history.length; i++) {
+      var coloreCerchio = col;
+      fill(coloreCerchio);
       noStroke();
       ellipse(this.history.x, this.history.y, a, a);
 
@@ -81,8 +83,7 @@ function draw() {
 
   // MOUSE ellipse
   for (var i = 0; i < particles.length; i++) {
-    var coloreCerchio = col;
-    fill(coloreCerchio);
+
     particles[i].update();
     particles[i].show();
   }
