@@ -128,7 +128,7 @@
       if (status == "animate"){
         feedback.removeClass("show");
         feedback.addClass("animate");
-        setTimeout(function(){feedback.removeClass("animate"); animation("static"); visible(true);}, 20000);
+        setTimeout(function(){feedback.removeClass("animate"); animation("static"); step1=1; step2=0; step3=0;visible(true);}, 20000);
         //time
       }
       if (status == "static") {
@@ -256,7 +256,7 @@
                   case "yellow" :  col='#FFD480';  step2=1; step3=0; getItSound.play();  break;
                   case "green" :   col='#32ffaa';   step2=1; step3=0; getItSound.play();  break;
                   case "blue" :  col='#2772DB';  step2=1; step3=0; getItSound.play();  break;
-                  case "Yellow" :  col='#FFD480';  tep2=1; step3=0; getItSound.play();  break;
+                  case "Yellow" :  col='#FFD480';  step2=1; step3=0; getItSound.play();  break;
                   case "Green" :   col='#32ffaa';  step2=1; step3=0;getItSound.play();  break;
                   case "Blue" :   col='#2772DB';  step2=1; step3=0; getItSound.play();  break;
                   case "white" :   col='#ffffff';   step2=1; step3=0; getItSound.play();  break;
