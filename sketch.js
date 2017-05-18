@@ -1,7 +1,7 @@
 var diameter;
 var border;
 var particles = [];
-
+var colore;
 
 // SKETCH
 function setup() {
@@ -13,6 +13,7 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
+  var colore = 100;
 }
 
 
@@ -21,19 +22,19 @@ function Particle(x, y) {
   // VARIABLES
   this.x = x;
   this.y = y;
-  this.col = col;
+  this.colore = colore;
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
     this.x = mouseX;
     this.y = mouseY;
-    this.col = col;
+    this.colore = colore;
     for (var i = 0; i < this.history.length; i++) {
       this.history[i].x;
       this.history[i].y;
-      this.history[i].col;
+      this.history[i].colore;
     }
-    var v = createVector(this.x, this.y,this.col);
+    var v = createVector(this.x, this.y,this.colore);
     if (mouseIsPressed){
       this.history.push(v);
     }
@@ -45,7 +46,7 @@ function Particle(x, y) {
   this.show = function() {
     ellipse(this.x, this.y, 24, 24);
     for (var i = 0; i < this.history.length; i++) {
-      fill(this.history[i].col);
+      fill(this.history[i].colore);
       noStroke();
       ellipse(this.history.x, this.history.y, a, a);
 
