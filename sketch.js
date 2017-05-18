@@ -1,8 +1,8 @@
 p5.disableFriendlyErrors = true;
 
 
-var diameter;
-var border;
+//var diameter;
+//var border;
 var particles = [];
 
 // SKETCH
@@ -74,16 +74,16 @@ function mousePressed() {
 
 function draw() {
   background('rgba(210,210,210, 1)');
-  if (attention == 0) {
-    diameter = 0;
-    var border = 0;
-  } else if (attention == 1) {
-    diameter = 75;
-    var border = 20;
-  } else {
-    var diameter = map(counter, 0, 4000, 175, 50);
-    var border = 20;
-  }
+//  if (attention == 0) {
+//    diameter = 0;
+//    var border = 0;
+//  } else if (attention == 1) {
+//    diameter = 75;
+//    var border = 20;
+//  } else {
+//    var diameter = map(counter, 0, 4000, 175, 50);
+//    var border = 20;
+//  }
 
 
   // PAGE
@@ -101,14 +101,14 @@ function draw() {
 
 
   // FIXED ellipse
-  if (attention == 0 || attention == 1) {
-    strokeWeight(0);
-  } else if (attention == 2){
-    strokeWeight(5);
-  }
-  fill('rgba(255, 117, 117, 0.5 )');
-  stroke(255, 117, 117);
-  ellipse(110, 815, diameter, diameter);
+//  if (attention == 0 || attention == 1) {
+//    strokeWeight(0);
+//  } else if (attention == 2){
+//    strokeWeight(5);
+//  }
+//  fill('rgba(255, 117, 117, 0.5 )');
+//  stroke(255, 117, 117);
+//  ellipse(110, 815, diameter, diameter);
 
 
   // BORDER
@@ -125,11 +125,10 @@ function draw() {
 
 function keyPressed() {
   if (keyCode === ENTER) {
-    attention = 1;
+    animation("show");
     awakeSound.play();
   } else if (keyCode === SHIFT) {
-    attention = 0;
-    counter = 0;
+    animation(false)
     byeSound.play();
 
   }

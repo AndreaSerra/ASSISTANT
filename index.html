@@ -7,6 +7,7 @@
   <script src="p5.js" type="text/javascript"></script>
   <script src="p5.dom.js" type="text/javascript"></script>
   <script src="p5.sound.js" type="text/javascript"></script>
+  <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
   <!-- LIBRARIES -->
   <!-- CSS -->
   <link href="style.css" rel="stylesheet" type="text/css">
@@ -18,6 +19,33 @@
       background-color: rgb(49, 51, 56);
     }
     canvas {vertical-align: top;}
+    #feedback {
+      border-radius: 50%;
+      height: 175px;
+      width: 175px;
+      position: fixed;
+      z-index: 999999;
+      background-color: rgba(255, 117, 117, 0.5 );
+      bottom: 80px; left: 70px;
+      display: none
+    }
+    .animate {
+      animation: size 30s linear;
+      border: rgba(255, 117, 117, 1 ) solid 10px;
+      display: block !important;
+    }
+    .show {
+      display: block !important;
+      transform: scale(0.5);
+    }
+    @keyframes size {
+    0% {
+        transform: scale(1.0);
+    }
+    100% {
+        transform: scale(0);
+    }
+}
   </style>
   <!-- CSS -->
 </head>
@@ -28,6 +56,7 @@
 
 <!-- HTML ELEMENTS -->
   <body>
+    <div id="feedback"></div>
     <div class="p5canvas" style="background-color:white">
     <div id="sketch-holder" class="">
       <!-- sketch will go here! -->
@@ -89,27 +118,50 @@
     }
     // VISIBLE FUNCTION
 
+
+   // TIMER FUNCTION
+  //  var globalTimer = function(){
+  //    var myTimer = setInterval(function()
+  //    {
+  //      counter++;
+  //      attention = 2;
+  //      //console.log(counter);
+  //      if (counter >= 4000) {
+  //      //  console.log("time out");
+  //        clearInterval(myTimer);
+  //        step1=1;
+  //        step2=0;
+  //        step3=0;
+  //        counter = 0;
+  //        attention = 1;
+  //        timeOut.play();
+  //        visible(false);
+  //      }
+  //    }, 20);
+  //  }
     // TIMER FUNCTION
-    var globalTimer = function(){
-      var myTimer = setInterval(function()
-      {
-        counter++;
-        attention = 2;
-        //console.log(counter);
-        if (counter >= 4000) {
-          console.log("time out");
-          clearInterval(myTimer);
-          step1=1;
-          step2=0;
-          step3=0;
-          counter = 0;
-          attention = 1;
-          timeOut.play();
-          visible(false);
-        }
-      }, 20);
+
+
+    // ANIMATION FUNCTION
+    function animation(status) {
+      var feedback = $("#feedback");
+      if (status == "animate"){
+        feedback.addClass("animate")
+        setTimeout(function(){ animation("show"); visible(false);}, 30000);
+        //time
+      }
+      if (status == "show") {
+        feedback.addClass("show");
+        visible(false);
+      }
+      if (status == false) {
+        feedback.removeClass("show animate");
+        visible(false);
+      }
     }
-    // TIMER FUNCTION
+    // ANIMATION FUNCTION
+
+
 
     // ONLOAD FUNCTION, speech recognition function are all inside this function; to use data outside this loop global variables MUST be declared
     window.onload = function() {  // declare function to run at first load
@@ -178,8 +230,8 @@
               case 0: break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "okay" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
-                  case "Okay" : globalTimer(); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
+                  case "okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
+                  case "Okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play();;break;
                 } break;
             }
             switch (step2){
