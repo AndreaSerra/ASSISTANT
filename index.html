@@ -19,15 +19,16 @@
       background-color: rgb(49, 51, 56);
     }
     canvas {vertical-align: top;}
-    #feedback {
+    .feedback {
       border-radius: 50%;
-      height: 175px;
-      width: 175px;
+      height: 75px;
+      width: 75px;
       position: fixed;
       z-index: 999999;
       background-color: rgba(255, 117, 117, 0.5 );
       bottom: 80px; left: 70px;
       display: none;
+      transform: scale(1.0);
     }
     .animate {
       animation: size 30s linear;
@@ -42,7 +43,7 @@
     }
     @keyframes size {
     0% {
-        transform: scale(1.0);
+        transform: scale(1.5);
     }
     100% {
         transform: scale(0.2);
@@ -58,7 +59,7 @@
 
 <!-- HTML ELEMENTS -->
   <body>
-    <div id="feedback"></div>
+    <div class="feedback"></div>
     <div class="p5canvas" style="background-color:white">
     <div id="sketch-holder" class="">
       <!-- sketch will go here! -->
@@ -122,7 +123,7 @@
 
     // ANIMATION FUNCTION
     function animation(status) {
-      var feedback = $("#feedback");
+      var feedback = $(".feedback");
       if (status == "animate"){
         feedback.addClass("animate")
         setTimeout(function(){ feedback.removeClass("animate"); feedback.addClass("show"); visible(true);}, 20000);
