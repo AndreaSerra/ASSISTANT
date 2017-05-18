@@ -27,11 +27,11 @@
       z-index: 999999;
       background-color: rgba(255, 117, 117, 0.5 );
       bottom: 80px; left: 70px;
-      display: none
+      display: none;
     }
     .animate {
       animation: size 30s linear;
-      border: rgba(255, 117, 117, 1 ) solid 10px;
+      border: rgba(255, 117, 117, 1 ) solid 0px;
       display: block !important;
     }
     .show {
@@ -85,7 +85,7 @@
 
     //var counter = 0;
     //var attention = 0;
-    //var active = false;
+    var active = true;
     //var reduce = (counter+1)/50;
     var a = 65;
     //var r = 100;
@@ -124,16 +124,16 @@
       var feedback = $("#feedback");
       if (status == "animate"){
         feedback.addClass("animate")
-        setTimeout(function(){ animation("show"); visible(false);}, 30000);
+        setTimeout(function(){ animation("show"); visible(true);}, 30000);
         //time
       }
       if (status == "show") {
         feedback.addClass("show");
-        visible(false);
+        visible(true);
       }
       if (status == false) {
         feedback.removeClass("show animate");
-        visible(false);
+        visible(true);
       }
     }
     // ANIMATION FUNCTION
