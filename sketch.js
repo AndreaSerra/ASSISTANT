@@ -126,6 +126,7 @@ function keyPressed() {
     awakeSound.play();
   } else if (keyCode === SHIFT) {
     attention = 0;
+    clearInterval(myTimer);
     counter = 0;
     byeSound.play();
   }
