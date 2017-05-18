@@ -125,6 +125,7 @@
     function animation(status) {
       var feedback = $(".feedback");
       if (status == "animate"){
+        feedback.removeClass("show");
         feedback.addClass("animate")
         setTimeout(function(){ feedback.removeClass("animate"); feedback.addClass("show"); visible(true);}, 20000);
         //time
