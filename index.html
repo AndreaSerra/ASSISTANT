@@ -148,7 +148,7 @@
             // When recognition begins
             recognizing = true;
             interim_span.style.opacity = '0.5';
-            console.log("speech recognition ON")
+          //  console.log("speech recognition ON")
         };
         // START FUNCTION
 
@@ -171,7 +171,7 @@
           interim_span.innerHTML = interim_transcript;
           //console.log(attention);
           searchCommand = transcription.innerHTML.split(" ");
-          console.log(searchCommand);
+          //console.log(searchCommand);
           for (i = 0; i < searchCommand.length; i++) {
 
             switch (step1) {

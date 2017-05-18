@@ -1,3 +1,6 @@
+p5.disableFriendlyErrors = true;
+
+
 var diameter;
 var border;
 var particles = [];
