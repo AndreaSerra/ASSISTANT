@@ -20,6 +20,7 @@ function Particle(x, y) {
   // VARIABLES
   this.x = x;
   this.y = y;
+  this.colore = col;
   this.history = [];
   // UPDATE FUNCTION
   this.update = function() {
@@ -28,10 +29,13 @@ function Particle(x, y) {
     for (var i = 0; i < this.history.length; i++) {
       this.history[i].x;
       this.history[i].y;
+      this.history.colore[i];
     }
     var v = createVector(this.x, this.y);
     if (mouseIsPressed){
       this.history.push(v);
+      this.history.push(this.colore);
+      console.log(this.history[i].colore);
     }
   }
   // UPDATE FUNCTION
