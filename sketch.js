@@ -35,7 +35,7 @@ function Particle(x, y) {
       this.history[i].y;
       this.history[i].col;
     }
-    var v = createVector(this.x, this.y);
+    var v = createVector(this.x, this.y,this.col);
     if (mouseIsPressed){
       this.history.push(v);
     }
