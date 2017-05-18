@@ -128,10 +128,10 @@
       if (status == "animate"){
         feedback.removeClass("show");
         feedback.addClass("animate")
-        setTimeout(function(){ animate("show"); visible(true);}, 20000);
+        setTimeout(function(){ animate("static"); visible(true);}, 20000);
         //time
       }
-      if (status == "show") {
+      if (status == "static") {
         feedback.removeClass("animate");
         feedback.addClass("show");
         visible(true);

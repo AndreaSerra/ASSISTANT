@@ -125,7 +125,7 @@ function draw() {
 
 function keyPressed() {
   if (keyCode === ENTER) {
-    animation("show");
+    animation("static");
     awakeSound.play();
   } else if (keyCode === SHIFT) {
     animation(false)
