@@ -1,50 +1,11 @@
 var diameter;
 var border;
-var particles = [];
-
-
-
-// BRUSH OBJ
-function Particle(x, y) {
-  // VARIABLES
-  this.x = x;
-  this.y = y;
-  this.history = [];
-  // UPDATE FUNCTION
-  this.update = function() {
-    this.x = mouseX;
-    this.y = mouseY;
-    for (var i = 0; i < this.history.length; i++) {
-      this.history[i].x;
-      this.history[i].y;
-    }
-    var v = createVector(this.x, this.y);
-    if (mouseIsPressed){
-      this.history.push(v);
-    }
-  }
-  // UPDATE FUNCTION
-  // SHOW FUNCTION
-  this.show = function() {
-    fill(0, 150);
-    ellipse(this.x, this.y, 24, 24);
-
-    for (var i = 0; i < this.history.length; i++) {
-      var pos = this.history[i];
-      noStroke();
-      ellipse(pos.x, pos.y, a, a);
-    }
-  }
-  // SHOW FUNCTION
-}
-// BRUSH OBJ
 
 
 
 
 
 
-// SKETCH
 function setup() {
   // Create the canvas
   var l = 1920;
@@ -54,11 +15,7 @@ function setup() {
   frameRate(90);
   var diameter = 50;
   var border = 20;
-}
 
-
-function mousePressed() {
-  particles.push(new Particle(mouseX, mouseY));
 }
 
 
@@ -85,10 +42,9 @@ function draw() {
   // MOUSE ellipse
   var coloreCerchio = color(r, g, bl);
   fill(coloreCerchio);
-  for (var i = 0; i < particles.length; i++) {
-    particles[i].update();
-    particles[i].show();
-  }
+  strokeWeight(0);
+  stroke(255, 117, 117);
+  ellipse(mouseX, mouseY, a, a);
 
 
   // FIXED ellipse
