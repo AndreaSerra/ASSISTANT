@@ -128,16 +128,16 @@
       if (status == "animate"){
         feedback.removeClass("show");
         feedback.addClass("animate");
-        setTimeout(function(){feedback.removeClass("animate"); animation("static"); step1=1; step2=0; step3=0;visible(true);}, 20000);
+        setTimeout(function(){feedback.removeClass("animate"); animation("static"); step1=1; step2=0; step3=0;visible(false);}, 20000);
         //time
       }
       if (status == "static") {
         feedback.addClass("show");
-        visible(true);
+        visible(false);
       }
       if (status == false) {
         feedback.removeClass("show animate");
-        visible(true);
+        visible(false);
       }
     }
     // ANIMATION FUNCTION
@@ -237,8 +237,8 @@
               case 0: break;
               case 1:
                 switch (searchCommand[i]) {
-                  case "okay" : console.log("trigger"); animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play(); break;
-                  case "Okay" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play(); break;
+                  case "assistant" : console.log("trigger"); animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play(); break;
+                  case "Assistant" : animation('animate'); step1 = 0; step2=1; step3=0;  visible(true); getItSound.play(); break;
                 } break;
             }
             switch (step2){
